@@ -1,3 +1,7 @@
+* {
+    transition: background-color 0.2s, color 0.2s;
+}
+
 body {
     height: 100%    ;
     min-height: 100vh;
@@ -307,14 +311,14 @@ nav {
     background-image: url('data:image/svg+xml;utf8,<svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 5.65C14.359 5.65 14.65 5.35899 14.65 5C14.65 4.64101 14.359 4.35 14 4.35V5.65ZM0.54038 4.54038C0.28654 4.79422 0.28654 5.20578 0.54038 5.45962L4.67696 9.59619C4.9308 9.85003 5.34235 9.85003 5.59619 9.59619C5.85003 9.34235 5.85003 8.9308 5.59619 8.67696L1.91924 5L5.59619 1.32304C5.85003 1.0692 5.85003 0.657647 5.59619 0.403806C5.34235 0.149965 4.9308 0.149965 4.67696 0.403806L0.54038 4.54038ZM14 4.35L1 4.35V5.65L14 5.65V4.35Z" fill="%236A6A6A"/></svg>');
     background-repeat: no-repeat;
     background-position: 13% 50%;
-    height: 35px;
+    height: 30px;
     /* Adjust as needed */
-    padding: 0px 0px 0px 23px;
+    padding: 0px 0px 0px 20px;
     /* Adjust as needed */
     cursor: pointer;
     /* Add a pointer cursor for better UX */
-    width: 95px;
-    background-size: 14px;
+    width: 88px;
+    background-size: 12px;
     border-radius: 5px;
     color: #6A6A6A;
     margin-bottom: -5px;
@@ -772,6 +776,7 @@ text-align: center;
     position: sticky;
     top: 4%; /* Make it stick to the top */
     z-index: 1000; /* Ensure it stays above other content */
+    margin-top: 40px;
 }
 .receipt {
     background-color: #fff;
@@ -915,6 +920,11 @@ text-align: center;
     border: none;
 }
 
+.receipt-button:hover{
+    background-color: #f7a07a;
+    cursor: pointer;
+}
+
 
 
 /* zigzag code */
@@ -940,38 +950,49 @@ text-align: center;
 /* Footer styling */
 .footer {
     background-color: #143039;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
-    margin-top: 80px;
+    color: #fff;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    text-align: left;
 }
 
 .footer-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    align-items: left;
+    flex-wrap: wrap;
+    margin-right: 300px;
 }
 
 .footer-left {
-    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.footer-left p strong {
+    color: #E9FDB8; 
+    font-size: 1.5em;
+}
+
+.footer-left p {
+    font-size: 1.2em;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.footer-section p {
+    margin: 10px 0;
 }
 
 .footer-logo {
-    width: 100px;
-    margin-bottom: 10px;
-}
-
-.footer-links {
-    display: flex;
-    gap: 15px;
-}
-
-.footer-links a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
+    margin-bottom: 180px;
+    margin-right: 100px;
+    max-width: 100px;
 }
