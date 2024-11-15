@@ -34,18 +34,3 @@ window.addEventListener('scroll', function() {
     }
 });
 
-<script>
-        // JavaScript to handle radio button selection
-        document.getElementById("submitButton").addEventListener("click", function() {
-            // Get all radio buttons in the form
-            const radioButtons = document.querySelectorAll('input[name="plan"]');
-            let selectedValue = "";
-
-            // Loop through the radio buttons to find the checked one
-            for (const radioButton of radioButtons) {
-                if (radioButton.checked) {
-                    selectedValue = radioButton.value;
-                    break;
-                }
-            }
-</script>
