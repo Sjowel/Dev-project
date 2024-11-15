@@ -34,3 +34,25 @@ window.addEventListener('scroll', function() {
     }
 });
 
+
+
+document.querySelectorAll('.Kchoosebutton').forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default button behavior
+
+        // Deselect all buttons
+        document.querySelectorAll('.Kchoosebutton').forEach(btn => btn.classList.remove('selected'));
+
+        // Mark the clicked button as selected
+        button.classList.add('selected');
+
+        // Find and select the radio button inside the clicked button
+        const radioInput = button.querySelector('input[type="radio"]');
+        if (radioInput) {
+            radioInput.checked = true;
+
+            // Update the output
+            document.getElementById('output').textContent = `You selected: ${radioInput.value}`;
+        }
+    });
+});
