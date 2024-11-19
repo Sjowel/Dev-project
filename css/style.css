@@ -356,7 +356,7 @@ nav.scrolled {
 
 .top-part-calculate-page p {
     font-size: 16px !important;
-    margin-left: -20px
+
 }
 
 
@@ -439,11 +439,11 @@ nav.scrolled {
     font-weight: bold;
     border-radius: 18px 18px 0 0;
     padding-left: 3%;
-height: 75px;
-display: flex;
-justify-content: start;
-align-items: center;
-margin: 0 auto;
+    height: 75px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0 auto;
     margin-top: 30px;
 }
 
@@ -475,8 +475,15 @@ margin: 0 auto;
 gap: 3%;
     margin-top: 30px;
     width: 100%;
+    
 
 
+}
+
+.en-of{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Bchoice, .Ochoice {
@@ -666,36 +673,49 @@ width: 100%;
 /* Eigen risico container */
 .Econtainer {
     background-color: #F5F5F5;
-    width: 100%;
-    height: 220px;
+
     margin: 0 auto;
     border-radius: 0 0 18px 18px;
-    margin-bottom: 30px;
+    padding: 3%;
 
 }
 
 .Econtainer h1{
     margin: 0;
-    padding-bottom: 0px;
-    margin-left: 20px;
-    padding-top: 10px;
+font-size: 25px;
 }
 
+.Echoice-text{
+    height: 70% !important;
+    margin-top: 25px;
+}
 
+.Echoice-Button-section{
+    height: 30%;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.Echoice-cointainer{
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+width: 100%;
+
+}
 
 .Eoption{
-    width: 250px;
-    height: 150px;
+    width: 100%;
     display: flex;
     border-radius: 18px;
-    opacity: 0px;
+
     background-color: white;
     flex-direction: column;
-    position: relative;
     justify-content: center;
     align-items: center;
-    border: 1.4px solid #143039;
-    margin: 20px;
+    border: 2px solid #143039;
+    padding: 10px;
+
 }
 
 .optionContainer {
@@ -703,34 +723,80 @@ width: 100%;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    margin-top: 30px;
     margin: 0 auto;
-    width: 100%;
+    margin-top: 30px;
+
 }
+
+.Child-Buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+
+.Child-Select{
+    margin-top: 40px;
+}
+
+.Child-Buttons-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+width: 100%;
+    margin-top: 30px;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.Child-Select-Disclaimer p {
+margin: 0;
+    font-size: 14px !important;
+    line-height: 22px !important;
+}
+
+.Child-Select-Disclaimer{
+    background-color: #EDEDED;
+    padding: 20px;
+    border-radius: 16px;
+    margin-top: 50px;
+}
+
+.Child-Button{
+    font-size: 25px !important;
+    font-weight: 600;
+    background-color: #F5F5F5;
+    border: 1px solid #143039;
+    height: 60px;
+    width: 130px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 
 .Eoption h1 {
     text-align: center;
+    font-size: 22px;
 
 }
 
 .Eoption p {
     text-align: center;
     margin: 0px;
-    margin-bottom: 40px;
+    font-size: 16px;
+    margin-top: 8px;
 }
 
 .Echoosebutton {
     background-color: #143039;
     color: #fff;
-    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 0.7em;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
+    font-size: 16px;
+    height: 50px;
+    width: 100%;
+    
 
 }
 
@@ -743,13 +809,13 @@ width: 100%;
 
 .Echoice {
     text-align: center;
-    position: absolute;
-    top: 10px;
     background-color: #E9FDB8;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-top: -21px;
-    margin-left: 10p;
+    padding: 8px 15px;
+    border-radius: 8px;
+    margin-top: -20px;
+    font-size: 16px;
+    font-weight: 600;
+    
 }
 
 /* Aanvullende verzekering container */
@@ -897,6 +963,7 @@ input[type="checkbox"]:checked::before {
     margin: 0 auto;
     border-radius: 0 0 18px 18px;
     margin-bottom: 30px; 
+
 }
 
 .Kcontainer h1{
@@ -907,19 +974,20 @@ input[type="checkbox"]:checked::before {
 
 /* Kinderen meeverzekeren containe*/
 .Kchoosebutton{
-    width: 400px;
-    height: 50px;
+
     display: flex;
-    border-radius: 10px;
+    border-radius: 8px;
     opacity: 0px;
     background-color: white;
     flex-direction: column;
-    position: relative;
     justify-content: center;
     align-items: center;
-    border: 1.4px solid #143039;
+    border: 1px solid #143039;
     cursor: pointer;
-    margin: 20px;
+    height: 70px;
+    font-size: 16px;
+    color: #143039;
+    width: 100%;
 }
 
 .Kchoosebutton label {
@@ -931,6 +999,7 @@ input[type="radio"]{
 
     accent-color: #143039;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 .Kchoosebutton:hover{
@@ -1330,7 +1399,6 @@ margin: 0px 0px 20px 0px;
 
 }
 .therapieland__vlak{
-    background-color: #0077ff;
     width: 500px;
     height: 300px;
     z-index: 1;
@@ -1368,7 +1436,7 @@ margin: 0px 0px 20px 0px;
  }
 
  .imgContainer img{
-    margin-left: 5%;
+width: 30rem;
  }
 .foto3{
     background-image: url(img/foto3.svg);
@@ -1427,3 +1495,47 @@ margin: 0px 0px 20px 0px;
  .vlak__btn:hover{
     background-color: #f7a07a; 
  }
+
+ .HBtop-bar {
+    background-color: #143039;
+    color: #E9FDB8;
+    text-align: left;
+    font-weight: bold;
+    border-radius: 18px 18px 0 0;
+    padding-left: 3%;
+    height: 75px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 80%;
+}
+
+.HBtop-bar h1{
+    padding-left: 20px;
+    font-size: 35px;
+    margin: 0;
+    padding: 0;
+}
+.HBcontainer {
+    background-color: #F5F5F5;
+    margin: 0 auto;
+    border-radius: 0 0 18px 18px;
+    margin-bottom: 30px;
+    
+ d    padding: 3%  3% 3% 3%;
+}
+
+.HBcontainer h1{
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.HBcontainer p{
+    color: #2A2A2A;
+    line-height: 28px;
+    font-size: 16px !important;
+    width: 90%;
+}
