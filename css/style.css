@@ -9,6 +9,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #E5ECEB;
     margin: 0;
+    overflow-x: hidden;
 
 }
 
@@ -42,12 +43,13 @@ h5 {
 a {
     color: #2A2A2A;
     text-decoration: none;
-    font-size: 16px ;
+    font-size: 16px;
 }
 
 p {
     text-decoration: none;
     font-size: 16px;
+line-height: 29px;
 }
 
 button {
@@ -207,7 +209,7 @@ nav.scrolled {
 .nav-dropdown-button {
     background-color: #fff;
     color: #000;
-    font-size: 16px;
+
     font-weight: 600;
     border: none;
     min-width: 170px;
@@ -464,6 +466,7 @@ nav.scrolled {
     align-items: center;
     margin: 0 auto;
     margin-top: 30px;
+    width: 100%;
 }
 
 .Btop-bar h1 {
@@ -498,7 +501,7 @@ nav.scrolled {
 
 }
 
-.Bchoice h5{
+.Bchoice h5 {
     margin-top: 20px;
 
 }
@@ -546,7 +549,7 @@ nav.scrolled {
 }
 
 
-.Bchoice-Extra-ZEKUR h5{
+.Bchoice-Extra-ZEKUR h5 {
     margin-top: 20px;
 
 }
@@ -655,7 +658,6 @@ nav.scrolled {
     border: 1.2px solid #143039;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 0.7em;
     position: absolute;
     bottom: 55px;
     left: 10px;
@@ -670,7 +672,7 @@ nav.scrolled {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 0.7em;
+
     position: absolute;
     bottom: 10px;
     left: 10px;
@@ -698,7 +700,6 @@ nav.scrolled {
     border: 1px solid #D5D5D5;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 0.7em;
     left: 10px;
     right: 10px;
     height: 50px;
@@ -767,7 +768,7 @@ nav.scrolled {
 
 }
 
-.Echoice-cointainer h3{
+.Echoice-cointainer h3 {
     text-align: center;
 }
 
@@ -859,7 +860,8 @@ nav.scrolled {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
+
+
     height: 50px;
     width: 100%;
 
@@ -892,7 +894,6 @@ nav.scrolled {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 0.7em;
     position: absolute;
     bottom: 10px;
     left: 10px;
@@ -943,7 +944,7 @@ nav.scrolled {
     width: 40%;
 }
 
-.Achoice-container h5{
+.Achoice-container h5 {
     margin-bottom: 20px;
 }
 
@@ -1003,7 +1004,7 @@ input[type="checkbox"]:checked::before {
     border: 1.2px solid #143039;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 0.7em;
+
     position: absolute;
     bottom: 55px;
     left: 10px;
@@ -1017,7 +1018,7 @@ input[type="checkbox"]:checked::before {
     border: 1.2px solid #143039;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 0.7em;
+
     position: absolute;
     bottom: 55px;
     left: 10px;
@@ -1067,7 +1068,7 @@ input[type="checkbox"]:checked::before {
     border: 1px solid #143039;
     cursor: pointer;
     height: 70px;
-    font-size: 16px;
+
     color: #143039;
     width: 100%;
 }
@@ -1096,7 +1097,7 @@ input[type="radio"] {
 }
 
 .full-page-left-side {
-    width: 60%;
+    width: 100%;
     max-width: 1000px;
     padding: 0 1% 0 5%;
 }
@@ -1104,6 +1105,8 @@ input[type="radio"] {
 .full-page-right-side {
     max-width: 555px;
     width: 100%;
+    display: flex;
+    justify-content: end;
     padding-right: 5%;
 }
 
@@ -1141,6 +1144,8 @@ input[type="radio"] {
     margin-bottom: 40px;
     height: 75vh;
     max-height: 700px;
+    width: 100%;
+    max-width: 433px;
 }
 
 
@@ -1334,6 +1339,8 @@ input[type="radio"] {
 
 .full-page-container {
     flex: 1;
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Footer styling */
@@ -1448,7 +1455,7 @@ input[type="radio"] {
     top: 350px;
     left: 500px;
     width: 300px;
-    height: 160px;
+    height: 130px;
     border-radius: 10px;
 }
 
@@ -1495,7 +1502,6 @@ input[type="radio"] {
 }
 
 .therapieland__vlak h2 {
-    font-size: 2.5rem;
     color: #143039;
     margin: 0;
 }
@@ -1569,7 +1575,6 @@ input[type="radio"] {
 .vlak p {
     color: white;
     display: flex;
-    font-size: 1rem;
 }
 
 .vlak__btn {
@@ -1619,15 +1624,12 @@ input[type="radio"] {
     width: 80%;
 }
 
-.HBcontainer h1 {
-    margin: 0;
-    padding: 0;
-}
 
 .HBcontainer p {
     color: #2A2A2A;
     line-height: 28px;
     width: 80%;
+    margin-top: -15px;
 }
 
 .HBchoice-container {
@@ -1637,7 +1639,6 @@ input[type="radio"] {
     width: 90%;
     margin-left: 50px;
     justify-content: space-between;
-    
 }
 
 .HBchoice {
@@ -1683,3 +1684,55 @@ input[type="radio"] {
     margin-top: 10px;
 
 }
+
+.HBinfo-button {
+    background-color: #FF8F5F;
+    color: #143039;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    left: 10px;
+    right: 10px;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.HBinfo-button:hover {
+    background-color: #f7a07a;
+}
+
+.HOtop-bar {
+    background-color: #143039;
+    color: #E9FDB8;
+    text-align: left;
+    font-weight: bold;
+    border-radius: 18px 18px 0 0;
+    padding-left: 3%;
+    height: 75px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
+
+}
+
+
+
+
+.Homepage-Bcontainer-Container {
+    width: 70%;
+}
+
+.Homepage-Bcontainer-Container-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    width: 100%;
+    flex-direction: column;
+
+}
+
