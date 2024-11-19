@@ -56,3 +56,54 @@ document.querySelectorAll('.Kchoosebutton').forEach(button => {
         }
     });
 });
+
+
+document.querySelectorAll('.Kchoosebutton').forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default button behavior
+
+        // Deselect all buttons
+        document.querySelectorAll('.Kchoosebutton').forEach(btn => btn.classList.remove('selected'));
+
+        // Mark the clicked button as selected
+        button.classList.add('selected');
+
+        // Find and select the radio button inside the clicked button
+        const radioInput = button.querySelector('input[type="radio"]');
+        if (radioInput) {
+            radioInput.checked = true;
+
+            // Update the output
+            document.getElementById('output').textContent = `You selected: ${radioInput.value}`;
+        }
+    });
+});
+
+document.getElementById('font-size-button-down').addEventListener('click', function() {
+    adjustFontSize(-1);
+});
+
+document.getElementById('font-size-button-up').addEventListener('click', function() {
+    adjustFontSize(1);
+});
+
+function adjustFontSize(change) {
+    const elements = document.querySelectorAll('h1, h2, h3, h5, a, p, button, li');
+    elements.forEach(element => {
+        const style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+        const currentSize = parseFloat(style);
+        const newSize = currentSize + change;
+
+        // Ensure the new size is within the range of -3 to +3 from the original size
+        const originalSize = parseFloat(element.getAttribute('data-original-size') || currentSize);
+        if (newSize >= originalSize - 2 && newSize <= originalSize + 2) {
+            element.style.fontSize = newSize + 'px';
+        }
+    });
+}
+
+// Store the original font size for each element
+document.querySelectorAll('h1, h2, h3, h5, a, p, button, li').forEach(element => {
+    const style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+    element.setAttribute('data-original-size', parseFloat(style));
+});
