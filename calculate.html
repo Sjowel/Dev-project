@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    
 
     <nav>
         <div class="nav-container">
@@ -103,7 +104,9 @@
     </nav>
 
     <div class="top-part-calculate-page">
-        <button class="top-part-calculate-page-back-button">TERUG</button>
+        <a href="health-insurance.html">
+            <button class="top-part-calculate-page-back-button">TERUG</button>
+        </a>    
         <p>Home / Zorgverzekeringen / <strong>Zorgverzekering Premie Berekenen</strong></p>
         <h1>Premie zorg­verzekering 2024 berekenen</h1>
         <p>Bekijk en vergelijk CZ zorgverzekeringen, bereken uw zorgpremie en sluit uw zorgverzekering af.</p>
@@ -222,7 +225,7 @@
                         <div class="Echoice-cointainer">
                             <div class="Echoice-text">
                                 <h3>€ 385,-</h3>
-                                <p>€ 0 korting per maand</p>
+                                <p>€ 0,- korting per maand</p>
                             </div>
                             <div class="Echoice-Button-section">
                                 <button class="Echoosebutton">Kiezen</button>
@@ -231,11 +234,10 @@
 
                     </div>
                     <div class="Eoption">
-                        <div class="Echoice">Meest gekozen</div>
                         <div class="Echoice-cointainer">
                             <div class="Echoice-text">
-                                <h3>€ 385,-</h3>
-                                <p>€ 0 korting per maand</p>
+                                <h3>€ 485,-</h3>
+                                <p>€ 4,- korting per maand</p>
                             </div>
                             <div class="Echoice-Button-section">
                                 <button class="Echoosebutton">Kiezen</button>
@@ -244,11 +246,11 @@
 
                     </div>
                     <div class="Eoption">
-                        <div class="Echoice">Meest gekozen</div>
+                        <div class="Echoice">Hoogste korting</div>
                         <div class="Echoice-cointainer">
                             <div class="Echoice-text">
-                                <h3>€ 385,-</h3>
-                                <p>€ 0 korting per maand</p>
+                                <h3>€ 885,-</h3>
+                                <p>€ 15,- korting per maand</p>
                             </div>
                             <div class="Echoice-Button-section">
                                 <button class="Echoosebutton">Kiezen</button>
@@ -449,17 +451,17 @@
 
                     <button class="Kchoosebutton">
                         <label>
-                            <input type="radio" name="kind" value="Yes">Ja, kind(eren) meeverzekeren
+                            <input type="radio" name="kind" value="Yes" onclick="toggleChildSelect()">Ja, kind(eren) meeverzekeren
                         </label>
                     </button>
                     <button class="Kchoosebutton">
                         <label>
-                            <input type="radio" name="kind" value="No">Nee, geen kind(eren) meeverzekeren
+                            <input type="radio" name="kind" value="No" onclick="toggleChildSelect()">Nee, geen kind(eren) meeverzekeren
                         </label>
                     </button>
 
                 </div>
-                <div class="Child-Select">
+                <div class="Child-Select" id="childSelect" style="display: none;">
                     <h2>Hoeveel kinderen wil je meeverzekeren?</h2>
                     <div class="Child-Buttons-container">
                         <div class="Child-Buttons">
@@ -611,10 +613,36 @@
 
         </div>
     </footer>
+    
 
 
 
     <script src="scripts.js"></script>
+    <script>
+        function toggleChildSelect() {
+            const childSelect = document.getElementById('childSelect');
+            const radios = document.getElementsByName('kind');
+            let selectedValue = null;
+    
+            // Loop through the radio buttons to find the selected one
+            for (const radio of radios) {
+                if (radio.checked) {
+                    selectedValue = radio.value;
+                    break; // Stop looping once we find the selected radio
+                }
+            }
+    
+            // Show or hide the Child-Select section based on the selected value
+            if (selectedValue === "Yes") {
+                childSelect.style.display = "block"; // Show when "Yes" is selected
+            } else {
+                childSelect.style.display = "none"; // Hide otherwise
+            }
+        }
+    
+        // Initialize the visibility on page load
+        toggleChildSelect();
+    </script>    
 </body>
 
 </html>

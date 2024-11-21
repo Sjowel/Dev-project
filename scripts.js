@@ -107,3 +107,29 @@ document.querySelectorAll('h1, h2, h3, h5, a, p, button, li').forEach(element =>
     const style = window.getComputedStyle(element, null).getPropertyValue('font-size');
     element.setAttribute('data-original-size', parseFloat(style));
 });
+
+// Kinderen meeverzekeren 
+
+function toggleChildSelect() {
+    const childSelect = document.getElementById('childSelect');
+    const radios = document.getElementsByName('kind');
+    let selectedValue = null;
+
+    // Loop through the radio buttons to find the selected one
+    for (const radio of radios) {
+        if (radio.checked) {
+            selectedValue = radio.value;
+            break; // Stop looping once we find the selected radio
+        }
+    }
+
+    // Show or hide the Child-Select section based on the selected value
+    if (selectedValue === "Yes") {
+        childSelect.style.display = "block"; // Show when "Yes" is selected
+    } else {
+        childSelect.style.display = "none"; // Hide otherwise
+    }
+}
+
+// Initialize the visibility on page load
+toggleChildSelect();

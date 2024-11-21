@@ -516,7 +516,7 @@ nav.scrolled {
 .Ochoice {
     background-color: #fff;
     padding: 2% 2% 2% 2%;
-    border: 2px solid #143039;
+    border: 2px solid #D9D9D9;
     border-radius: 18px;
     width: 100%;
     text-align: left;
@@ -956,6 +956,20 @@ nav.scrolled {
     margin-top: -10px;
 }
 
+content: '';
+/* Required to display the pseudo-element */
+position: absolute;
+left: 0;
+top: 50%;
+transform: translateY(-50%);
+background: url('data:image/svg+xml;utf8,<svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 5.82609L6.45714 10L15 2" stroke="%23009933" stroke-width="3"/></svg>') no-repeat left center;
+background-size: 20px 20px;
+/* Adjust size as needed */
+width: 20px;
+/* Match the size of the icon */
+height: 20px;
+/* Match the size of the icon */
+
 input[type="checkbox"] {
     -webkit-appearance: none;
     appearance: none;
@@ -967,10 +981,10 @@ input[type="checkbox"] {
     /* Adjust the border thickness and color as needed */
     border-radius: 4px;
     /* Optional: add border-radius for rounded corners */
-    position: relative;
     transform: scale(1.5);
     /* Adjust the scale value as needed */
     margin-right: 20px;
+
 }
 
 input[type="checkbox"]:checked {
@@ -1483,7 +1497,7 @@ input[type="radio"] {
 
 .therapieland {
     width: 100%;
-    height: 400px;
+    padding: 2% 0 2% 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1494,7 +1508,6 @@ input[type="radio"] {
 
 .therapieland__vlak {
     width: 500px;
-    height: 300px;
     z-index: 1;
     padding: 10px;
     margin-left: 5%;
@@ -1504,6 +1517,10 @@ input[type="radio"] {
 .therapieland__vlak h2 {
     color: #143039;
     margin: 0;
+}
+
+.vlak h1{
+    color: white;
 }
 
 .therapieland__vlak p {
@@ -1606,7 +1623,7 @@ input[type="radio"] {
     align-items: center;
     margin: 0 auto;
     margin-top: 30px;
-    width: 80%;
+    width: 100%;
 }
 
 .HBtop-bar h1 {
@@ -1615,14 +1632,6 @@ input[type="radio"] {
     padding: 0;
 }
 
-.HBcontainer {
-    background-color: #F5F5F5;
-    margin: 0 auto;
-    border-radius: 0 0 18px 18px;
-    margin-bottom: 30px;
-    padding: 3% 3% 3% 3%;
-    width: 80%;
-}
 
 
 .HBcontainer p {
@@ -1685,7 +1694,7 @@ input[type="radio"] {
 
 }
 
-.HBinfo-button {
+.HBpremie-button {
     background-color: #FF8F5F;
     color: #143039;
     padding: 10px 20px;
@@ -1699,9 +1708,107 @@ input[type="radio"] {
     margin-bottom: 10px;
 }
 
-.HBinfo-button:hover {
+.HBpremie-button1 {
+    background-color: #FF8F5F;
+    color: #143039;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    left: 10px;
+    right: 10px;
+    height: 50px;
+    width: 100%;
+
+}
+
+.HBpremie-button:hover, .HBpremie-button1:hover {
     background-color: #f7a07a;
 }
+
+
+.HBchoice-container-Extra-ZEKUR {
+    display: flex;
+    gap: 10%;
+    margin-top: 30px;
+    width: 80%;
+}
+
+.HBchoice-Extra-ZEKUR {
+    background-color: #fff;
+    padding: 2% 2% 2% 2%;
+    border: 2px solid #143039;
+    border-radius: 18px;
+    width: 50%;
+    text-align: left;
+    display: flex !important;
+    justify-content: space-between !important;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+.HAinfo-button {
+    background-color: #fff;
+    color: #143039;
+    padding: 1px 1px;
+    border: 1px solid #D5D5D5;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 30px;
+    width: 100%;
+}
+
+.HAitem-text {
+    text-align: left;
+    flex: 1; /* Laat de tekst aan de linkerkant staan */
+}
+
+.HAitem-price {
+    text-align: center;
+    margin-left: 10px; /* Ruimte tussen tekst en prijs */
+    font-weight: bold;
+    color: #2A2A2A; /* Tekstkleur van de prijs */
+    background-color: #E9FDB8; /* Achtergrondkleur */
+    padding: 3px 20px; /* Maak de rechthoek groter door padding */
+    border-radius: 5px; /* Maak de hoeken afgerond */
+    display: inline-block; /* Zorg dat de rechthoek alleen de tekst omgeeft */
+    min-width: 50px; /* Optioneel: minimaal breedte voor uniformiteit */    
+}
+
+.HAcustom-bullet-list {
+    list-style: none;
+    /* Verwijder standaard bullets */
+    padding-left: 0;
+    /* Verwijder standaard padding */
+    padding-top: 10px;
+    line-height: 50px;
+    color: #2A2A2A;
+}
+
+.HAcustom-bullet-list li {
+    display: flex;
+    justify-content: space-between; /* Zorg dat de prijs naar rechts gaat */
+    align-items: center; /* Centreer tekst en prijs verticaal */
+    position: relative;
+    line-height: 28px; /* Zorg voor consistente verticale ruimte */
+    padding-left: 30px; /* Ruimte voor het icoon */
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.HAcustom-bullet-list li::before {
+    content: '';
+    /* Pseudo-element voor het icoon */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url('data:image/svg+xml;utf8,<svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 5.82609L6.45714 10L15 2" stroke="%23009933" stroke-width="3"/></svg>') no-repeat left center;
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+}
+
 
 .HOtop-bar {
     background-color: #143039;
@@ -1719,11 +1826,20 @@ input[type="radio"] {
 
 }
 
-
-
+.HOchoice {
+    background-color: #fff;
+    padding: 2% 2% 2% 2%;
+    border: 2px solid #D5D5D5;
+    border-radius: 18px;
+    width: 100%;
+    text-align: left;
+    display: flex !important;
+    justify-content: space-between !important;
+    flex-direction: column;
+}
 
 .Homepage-Bcontainer-Container {
-    width: 70%;
+    width: 90%;
 }
 
 .Homepage-Bcontainer-Container-outer {
@@ -1736,3 +1852,152 @@ input[type="radio"] {
 
 }
 
+.HOinfo-button2{
+    background-color: #FF8F5F;
+    color: #143039;
+    padding: 10px 20px;
+    border: 1px solid #D5D5D5;
+    border-radius: 8px;
+    cursor: pointer;
+    left: 10px;
+    right: 10px;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.HOchoose-button2{
+    background-color: #fff;
+    color: #143039;
+    padding: 10px 20px;
+    border: 1px solid #D5D5D5;
+    border-radius: 8px;
+    cursor: pointer;
+    left: 10px;
+    right: 10px;
+    height: 50px;
+    width: 100%;
+}
+
+.HOchoose-button2:hover{
+    background-color: #efeeee;
+    color: #143039;
+}
+
+.HOinfo-button2:hover {
+    background-color: #f7a07a;
+}
+
+.personal-details-input {
+
+}
+
+.personal-details-input input[type="text"] {
+    padding: 5px 30px 5px 5px;
+    /* Adjust padding to make space for the icon */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    background-color: #FFFFFF;
+    border: none;
+    height: 53px;
+    border-radius: 9px;
+    padding-left: 18px;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.personal-details-input {
+    height: 100%;
+
+    cursor: pointer;
+    border-radius: 9px 9px 9px 9px;
+}
+
+.gender-radio-buttons{
+    display: flex;
+    margin-top: 20px;
+}
+
+.gender-radio-buttons label {
+
+    margin-right: 20px;
+}
+
+.next-button {
+    height: 45px;
+    background-color: #FF8F5F;
+    border: none;
+    border-radius: 8px;
+    width: 144px;
+    color: #143039;
+    margin-top: 20px;
+}
+
+
+.next-button:hover {
+    background-color: #f7a07a;
+    cursor: pointer;
+}
+
+.checkbox-personal-details-section {
+    display: flex;
+    align-items: center; /* Vertically centers the items */
+
+    width: 100%;
+}
+
+
+
+.checkbox-personal-details-section input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 17px;
+    /* Adjust the width as needed */
+    height: 17px;
+    /* Adjust the height as needed */
+    border: 0.5px solid #ABABAB;
+    /* Adjust the border thickness and color as needed */
+    border-radius: 4px;
+    /* Optional: add border-radius for rounded corners */
+    transform: scale(1.5);
+    /* Adjust the scale value as needed */
+    margin-right: 20px;
+    margin-top: 40px;
+
+}
+
+.checkbox-personal-details-section input[type="checkbox"]:checked {
+    background-color: green;
+    /* Set the background color to green when checked */
+    border-color: green;
+}
+
+.checkbox-personal-details-section input[type="checkbox"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    /* Adjusted to center the checkmark */
+    left: 5px;
+    /* Adjusted to center the checkmark */
+    width: 3px;
+    /* Adjusted width */
+    height: 8px;
+    /* Adjusted height */
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    /* Adjusted border width */
+    transform: rotate(45deg);
+
+}
+
+
+.checkbox-personal-details-section input[type="checkbox"],
+.checkbox-personal-details-section label {
+    margin: 0; /* Ensure there is no margin affecting alignment */
+    padding: 0; /* Ensure there is no padding affecting alignment */
+    margin-right: 15px;
+    margin-left: 2px;
+    margin-top: 10px;
+}
