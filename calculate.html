@@ -446,21 +446,16 @@
             </div>
             <div class="Bcontainer">
                 <h2>Wil je kinderen meeverzekeren?</h2>
-
+            
                 <div class="optionContainer">
-
-                    <button class="Kchoosebutton">
-                        <label>
-                            <input type="radio" name="kind" value="Yes" onclick="toggleChildSelect()">Ja, kind(eren) meeverzekeren
-                        </label>
-                    </button>
-                    <button class="Kchoosebutton">
-                        <label>
-                            <input type="radio" name="kind" value="No" onclick="toggleChildSelect()">Nee, geen kind(eren) meeverzekeren
-                        </label>
-                    </button>
-
+                    <label>
+                        <input type="radio" name="kind" value="Yes" onclick="toggleChildSelect()"> Ja, kind(eren) meeverzekeren
+                    </label>
+                    <label>
+                        <input type="radio" name="kind" value="No" onclick="toggleChildSelect()"> Nee, geen kind(eren) meeverzekeren
+                    </label>
                 </div>
+            
                 <div class="Child-Select" id="childSelect" style="display: none;">
                     <h2>Hoeveel kinderen wil je meeverzekeren?</h2>
                     <div class="Child-Buttons-container">
@@ -469,26 +464,23 @@
                             <h1>1</h1>
                             <button class="Child-Button">+</button>
                         </div>
-                        <div class="Child-Select-Disclaimer">
-                            <p>Tot 18 jaar zijn kinderen gratis meeverzekerd voor de basisverzekering en hoeven zij geen
-                                eigen
-                                risico te betalen. Ze krijgen dezelfde basisverzekering en aanvullende verzekeringen als
-                                die
-                                van degene die de verzekering aanvraagt.
-                                Wil je voor je kinderen een andere basisverzekering of andere aanvullende verzekering
-                                kiezen,
-                                schrijf dan je kinderen bij via Mijn ZEKUR Zorg. Dit kan zodra je jouw verzekeringspolis
-                                hebt
-                                ontvangen. Voor de aanvullende verzekering betaal je voor kinderen tot 18 jaar de
-                                volgende premie:
-                                ZEKUR Fysio, ZEKUR tand en ZEKUR buitenland en reis: €2,50 per verzekering per maand
-                                extra ZEKUR: €7,50 per maand</p>
-                        </div>
                     </div>
-
+                    <div class="Child-Select-Disclaimer">
+                        <p>Tot 18 jaar zijn kinderen gratis meeverzekerd voor de basisverzekering en hoeven zij geen
+                            eigen risico te betalen. Ze krijgen dezelfde basisverzekering en aanvullende verzekeringen als
+                            die van degene die de verzekering aanvraagt.
+                            Wil je voor je kinderen een andere basisverzekering of andere aanvullende verzekering kiezen,
+                            schrijf dan je kinderen bij via Mijn ZEKUR Zorg. Dit kan zodra je jouw verzekeringspolis
+                            hebt ontvangen. Voor de aanvullende verzekering betaal je voor kinderen tot 18 jaar de
+                            volgende premie:
+                            ZEKUR Fysio, ZEKUR tand en ZEKUR buitenland en reis: €2,50 per verzekering per maand
+                            extra ZEKUR: €7,50 per maand</p>
+                    </div>
                 </div>
             </div>
-        </div>    
+            
+        
+        </div>
 
 
 
@@ -618,31 +610,7 @@
 
 
     <script src="scripts.js"></script>
-    <script>
-        function toggleChildSelect() {
-            const childSelect = document.getElementById('childSelect');
-            const radios = document.getElementsByName('kind');
-            let selectedValue = null;
-    
-            // Loop through the radio buttons to find the selected one
-            for (const radio of radios) {
-                if (radio.checked) {
-                    selectedValue = radio.value;
-                    break; // Stop looping once we find the selected radio
-                }
-            }
-    
-            // Show or hide the Child-Select section based on the selected value
-            if (selectedValue === "Yes") {
-                childSelect.style.display = "block"; // Show when "Yes" is selected
-            } else {
-                childSelect.style.display = "none"; // Hide otherwise
-            }
-        }
-    
-        // Initialize the visibility on page load
-        toggleChildSelect();
-    </script>    
+
 </body>
 
 </html>
