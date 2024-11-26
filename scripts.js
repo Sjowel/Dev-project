@@ -36,49 +36,6 @@ window.addEventListener('scroll', function() {
 
 
 
-document.querySelectorAll('.Kchoosebutton').forEach(button => {
-    button.addEventListener('click', (e) => {
-        e.preventDefault(); // Prevent default button behavior
-
-        // Deselect all buttons
-        document.querySelectorAll('.Kchoosebutton').forEach(btn => btn.classList.remove('selected'));
-
-        // Mark the clicked button as selected
-        button.classList.add('selected');
-
-        // Find and select the radio button inside the clicked button
-        const radioInput = button.querySelector('input[type="radio"]');
-        if (radioInput) {
-            radioInput.checked = true;
-
-            // Update the output
-            document.getElementById('output').textContent = `You selected: ${radioInput.value}`;
-        }
-    });
-});
-
-
-document.querySelectorAll('.Kchoosebutton').forEach(button => {
-    button.addEventListener('click', (e) => {
-        e.preventDefault(); // Prevent default button behavior
-
-        // Deselect all buttons
-        document.querySelectorAll('.Kchoosebutton').forEach(btn => btn.classList.remove('selected'));
-
-        // Mark the clicked button as selected
-        button.classList.add('selected');
-
-        // Find and select the radio button inside the clicked button
-        const radioInput = button.querySelector('input[type="radio"]');
-        if (radioInput) {
-            radioInput.checked = true;
-
-            // Update the output
-            document.getElementById('output').textContent = `You selected: ${radioInput.value}`;
-        }
-    });
-});
-
 document.getElementById('font-size-button-down').addEventListener('click', function() {
     adjustFontSize(-1);
 });
@@ -133,3 +90,31 @@ function toggleChildSelect() {
 
 // Initialize the visibility on page load
 toggleChildSelect();
+
+
+// + of - kind
+
+// Selecteer de elementen
+const decrementButton = document.getElementById('decrementButton');
+const incrementButton = document.getElementById('incrementButton');
+const counterDisplay = document.getElementById('counter');
+
+// Stel een startwaarde in
+let counterValue = 1;
+
+// Voeg functionaliteit toe aan de '-' knop
+decrementButton.addEventListener('click', () => {
+    if (counterValue > 0) { // Controleer of de waarde niet onder 0 komt
+        counterValue--;
+        counterDisplay.textContent = counterValue; // Werk de weergave bij
+    }
+});
+
+// Voeg functionaliteit toe aan de '+' knop
+incrementButton.addEventListener('click', () => {
+    if (counterValue < 5){
+    counterValue++;
+    counterDisplay.textContent = counterValue; // Werk de weergave bij
+    }
+});
+

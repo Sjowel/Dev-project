@@ -776,15 +776,29 @@ nav.scrolled {
     width: 100%;
     display: flex;
     border-radius: 18px;
-
     background-color: white;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 2px solid #143039;
     padding: 10px;
-
+    height: 200px;
 }
+
+.Eoption2 {
+    width: 100%;
+    display: flex;
+    border-radius: 18px;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #143039;
+    padding: 10px;
+    height: 200px;
+}
+
+
 
 .optionContainer {
     display: flex;
@@ -883,7 +897,20 @@ nav.scrolled {
     margin-top: -20px;
     font-size: 16px;
     font-weight: 600;
+}
 
+.Echoice2 {
+    text-align: center;
+    padding: 8px 15px;
+    border-radius: 8px;
+    margin-top: -20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: transparent;
+}
+
+.Echoice2 p{
+    background-color: none;
 }
 
 /* Aanvullende verzekering container */
@@ -1076,13 +1103,12 @@ input[type="checkbox"]:checked::before {
     border-radius: 8px;
     opacity: 0px;
     background-color: white;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     border: 1px solid #143039;
     cursor: pointer;
     height: 70px;
-
     color: #143039;
     width: 100%;
 }

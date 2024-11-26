@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    
+
 
     <nav>
         <div class="nav-container">
@@ -41,9 +41,14 @@
                         </div>
                         <div class="nav-font-size-section">
                             <button id="font-size-button-down" class="nav-font-size-button-down">-1</button>
-                            <svg width="29" height="16" viewBox="0 0 29 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M29 16H25.7165L24.4113 12.3656H18.4358L17.2019 16H14L19.8226 0H23.0143L29 16ZM23.4426 9.66985L21.3827 3.73261L19.3637 9.66985H23.4426Z" fill="black" />
-                                <path d="M11 16H8.59211L7.63494 13.2742H3.25289L2.34806 16H0L4.26988 4H6.61047L11 16ZM6.92454 11.2524L5.414 6.79945L3.93338 11.2524H6.92454Z" fill="black" />
+                            <svg width="29" height="16" viewBox="0 0 29 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M29 16H25.7165L24.4113 12.3656H18.4358L17.2019 16H14L19.8226 0H23.0143L29 16ZM23.4426 9.66985L21.3827 3.73261L19.3637 9.66985H23.4426Z"
+                                    fill="black" />
+                                <path
+                                    d="M11 16H8.59211L7.63494 13.2742H3.25289L2.34806 16H0L4.26988 4H6.61047L11 16ZM6.92454 11.2524L5.414 6.79945L3.93338 11.2524H6.92454Z"
+                                    fill="black" />
                             </svg>
                             <button id="font-size-button-up" class="nav-font-size-button-up">+1</button>
                         </div>
@@ -106,7 +111,7 @@
     <div class="top-part-calculate-page">
         <a href="health-insurance.html">
             <button class="top-part-calculate-page-back-button">TERUG</button>
-        </a>    
+        </a>
         <p>Home / Zorgverzekeringen / <strong>Zorgverzekering Premie Berekenen</strong></p>
         <h1>Premie zorg­verzekering 2024 berekenen</h1>
         <p>Bekijk en vergelijk CZ zorgverzekeringen, bereken uw zorgpremie en sluit uw zorgverzekering af.</p>
@@ -152,7 +157,7 @@
                             <div class="Bchoice-top-left-dotted-line"></div>
 
 
-                           <h5>U krijgt:</h5>
+                            <h5>U krijgt:</h5>
                             <ul class="custom-bullet-list">
                                 <li>Altijd naar een ziekenhuis bij jou in de buurt</li>
                                 <li>100% vergoeding bij geconstateerde zorgverleners</li>
@@ -235,6 +240,8 @@
                     </div>
                     <div class="Eoption">
                         <div class="Echoice-cointainer">
+                            <div class="Echoice2">Meest gekozen</div>
+
                             <div class="Echoice-text">
                                 <h3>€ 485,-</h3>
                                 <p>€ 4,- korting per maand</p>
@@ -446,30 +453,41 @@
             </div>
             <div class="Bcontainer">
                 <h2>Wil je kinderen meeverzekeren?</h2>
-            
+
                 <div class="optionContainer">
-                    <label>
-                        <input type="radio" name="kind" value="Yes" onclick="toggleChildSelect()"> Ja, kind(eren) meeverzekeren
+                    
+                    
+                    <label class="Kchoosebutton">
+                       <input type="radio" name="kind" value="Yes" onclick="toggleChildSelect()"> Ja, kind(eren)
+                        meeverzekeren
                     </label>
-                    <label>
-                        <input type="radio" name="kind" value="No" onclick="toggleChildSelect()"> Nee, geen kind(eren) meeverzekeren
+                
+                    
+                    <label class="Kchoosebutton" >
+                        <input type="radio" name="kind" value="No" onclick="toggleChildSelect()"> Nee, geen
+                        kind(eren)
+                        meeverzekeren
                     </label>
+                    
                 </div>
-            
+
                 <div class="Child-Select" id="childSelect" style="display: none;">
                     <h2>Hoeveel kinderen wil je meeverzekeren?</h2>
                     <div class="Child-Buttons-container">
                         <div class="Child-Buttons">
-                            <button class="Child-Button">-</button>
-                            <h1>1</h1>
-                            <button class="Child-Button">+</button>
+                            <button class="Child-Button" id="decrementButton">-</button>
+                            <h1 id="counter">1</h1>
+                            <button class="Child-Button" id="incrementButton">+</button>
                         </div>
                     </div>
+                    
                     <div class="Child-Select-Disclaimer">
                         <p>Tot 18 jaar zijn kinderen gratis meeverzekerd voor de basisverzekering en hoeven zij geen
-                            eigen risico te betalen. Ze krijgen dezelfde basisverzekering en aanvullende verzekeringen als
+                            eigen risico te betalen. Ze krijgen dezelfde basisverzekering en aanvullende verzekeringen
+                            als
                             die van degene die de verzekering aanvraagt.
-                            Wil je voor je kinderen een andere basisverzekering of andere aanvullende verzekering kiezen,
+                            Wil je voor je kinderen een andere basisverzekering of andere aanvullende verzekering
+                            kiezen,
                             schrijf dan je kinderen bij via Mijn ZEKUR Zorg. Dit kan zodra je jouw verzekeringspolis
                             hebt ontvangen. Voor de aanvullende verzekering betaal je voor kinderen tot 18 jaar de
                             volgende premie:
@@ -478,98 +496,98 @@
                     </div>
                 </div>
             </div>
-            
-        
+
+
         </div>
 
 
 
-            <div class="full-page-right-side">
-                <div class="receipt-container">
-                    <div class="receipt">
-                        <div class="receipt-top">
-                            <h4>Jouw premie in een overzicht:</h4>
-                            <img src="/img/Logo ZEKUR.svg" alt="Logo">
-                        </div>
-                        <h5>Basisverzekering</h5>
-                        <div class="receipt-content">
-
-                            <div class="receipt-content-ul-section-left">
-                                <ul class="receipt-list">
-                                    <li>Gewoon ZEKUR Zorg Basis</li>
-                                    <li>Korting bij eigen risico van € 485,-</li>
-                                </ul>
-                            </div>
-                            <div class="receipt-content-pricing-right">
-                                <ul class="receipt-list-pricing">
-                                    <li>
-                                        € 147,30
-                                    </li>
-                                    <li>€ -4,00</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="dotted-line"></div>
-                        <h5>Aanvullende verzekeringen</h5>
-                        <div class="receipt-content">
-
-                            <div class="receipt-content-ul-section-left">
-                                <ul class="receipt-list">
-                                    <li>Extra ZEKUR</li>
-                                    <li>Hulp na een Ongeval</li>
-                                </ul>
-                            </div>
-                            <div class="receipt-content-pricing-right">
-                                <ul class="receipt-list-pricing">
-                                    <li>
-                                        € 37,95
-                                    </li>
-                                    <li>€ 2,25</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="dotted-line"></div>
-
-
-
-                        <h5>Belastingen</h5>
-                        <div class="receipt-content">
-
-                            <div class="receipt-content-ul-section-left">
-                                <ul class="receipt-list-without-icon">
-                                    <li>Assurantiebelasting</li>
-                                    <li>Provisie</li>
-                                </ul>
-                            </div>
-                            <div class="receipt-content-pricing-right">
-                                <ul class="receipt-list-pricing">
-                                    <li>
-                                        € 37,95
-                                    </li>
-                                    <li>€ 2,25</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="dotted-line"></div>
-                        <div class="receipt-total-section">
-                            <a style="color: #2A2A2A; font-size: 16px; !important">Premie per maand
-                            </a>
-                            <h4 style="font-size:25px; font-weight: 600;">€ 183,50
-
-                            </h4>
-                        </div>
-                        <div class="receipt-button-section">
-                            <button class="receipt-button">Ga verder</button>
-                        </div>
-
-
+        <div class="full-page-right-side">
+            <div class="receipt-container">
+                <div class="receipt">
+                    <div class="receipt-top">
+                        <h4>Jouw premie in een overzicht:</h4>
+                        <img src="/img/Logo ZEKUR.svg" alt="Logo">
                     </div>
-                    <div class="zigzag"></div>
-                </div>
-            </div>
+                    <h5>Basisverzekering</h5>
+                    <div class="receipt-content">
 
-        
+                        <div class="receipt-content-ul-section-left">
+                            <ul class="receipt-list">
+                                <li>Gewoon ZEKUR Zorg Basis</li>
+                                <li>Korting bij eigen risico van € 485,-</li>
+                            </ul>
+                        </div>
+                        <div class="receipt-content-pricing-right">
+                            <ul class="receipt-list-pricing">
+                                <li>
+                                    € 147,30
+                                </li>
+                                <li>€ -4,00</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="dotted-line"></div>
+                    <h5>Aanvullende verzekeringen</h5>
+                    <div class="receipt-content">
+
+                        <div class="receipt-content-ul-section-left">
+                            <ul class="receipt-list">
+                                <li>Extra ZEKUR</li>
+                                <li>Hulp na een Ongeval</li>
+                            </ul>
+                        </div>
+                        <div class="receipt-content-pricing-right">
+                            <ul class="receipt-list-pricing">
+                                <li>
+                                    € 37,95
+                                </li>
+                                <li>€ 2,25</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dotted-line"></div>
+
+
+
+                    <h5>Belastingen</h5>
+                    <div class="receipt-content">
+
+                        <div class="receipt-content-ul-section-left">
+                            <ul class="receipt-list-without-icon">
+                                <li>Assurantiebelasting</li>
+                                <li>Provisie</li>
+                            </ul>
+                        </div>
+                        <div class="receipt-content-pricing-right">
+                            <ul class="receipt-list-pricing">
+                                <li>
+                                    € 37,95
+                                </li>
+                                <li>€ 2,25</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dotted-line"></div>
+                    <div class="receipt-total-section">
+                        <a style="color: #2A2A2A; font-size: 16px; !important">Premie per maand
+                        </a>
+                        <h4 style="font-size:25px; font-weight: 600;">€ 183,50
+
+                        </h4>
+                    </div>
+                    <div class="receipt-button-section">
+                        <button class="receipt-button">Ga verder</button>
+                    </div>
+
+
+                </div>
+                <div class="zigzag"></div>
+            </div>
+        </div>
+
+
 
     </div>
     <footer class="footer">
@@ -605,7 +623,7 @@
 
         </div>
     </footer>
-    
+
 
 
 
