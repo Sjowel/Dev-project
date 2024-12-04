@@ -207,3 +207,101 @@ document.querySelectorAll('.Bchoose-button3').forEach(button => {
         }
     });
 });
+
+
+// receipt
+// const cart = []
+// let totalPrice = 0
+
+// function addToCart() {
+//     const item = {
+//         name: event.target.closest('Bchoice').querySelector('Bchoice-top-left').textContent,
+//         price: event.target.closest('Bchoice').querySelector('Bprice').textContent
+
+//     };
+
+//     cart.push(item);
+
+//     const numericPrice = parseFloat(item.price.replace(/[^0-9,.]/g, '').replace(',', '.'));
+//     totalPrice += numericPrice;
+
+//     displayCart();
+// }
+
+// function displayCart() {
+//     const cartItemsContainer = document.getElementById('receipt-list');
+//     cartItemsContainer.innerHTML = ''; // Clear the previous items
+
+//     cart.forEach((item, index) => {
+//         const li = document.createElement('li');
+//         li.className = "receipt-item"
+//         li.textContent = `${item.name} - ${item.price}`;
+
+//         // Add a remove button for each item
+//         const removeButton = document.createElement('button');
+//         removeButton.className = "removeButton"
+//         removeButton.textContent = 'Remove';
+//         removeButton.addEventListener('click', () => {
+//             removeFromCart(index, item);
+//         });
+
+//         li.appendChild(removeButton);
+//         cartItemsContainer.appendChild(li);
+//     });
+
+
+//     document.getElementById("toto").innerHTML = totalPrice.toFixed(2);
+// }
+
+function addToCart(itemName, itemPrice) {
+    // Zoek de bon-sectie waar het nieuwe item moet worden toegevoegd.
+    const receiptContainer = document.querySelector('.receipt-container .receipt');
+
+    // Maak een nieuwe sectie voor het toegevoegde item.
+    const newSection = document.createElement('div');
+    newSection.classList.add('receipt-content');
+
+    // Linkerzijde: itemnaam
+    const itemNameDiv = document.createElement('div');
+    itemNameDiv.classList.add('receipt-content-ul-section-left');
+    const itemList = document.createElement('ul');
+    itemList.classList.add('receipt-list');
+    const itemElement = document.createElement('li');
+    itemElement.classList.add('receipt-item');
+    itemElement.textContent = itemName; // Itemnaam toevoegen
+    itemList.appendChild(itemElement);
+    itemNameDiv.appendChild(itemList);
+
+    // Rechterzijde: prijs
+    const itemPriceDiv = document.createElement('div');
+    itemPriceDiv.classList.add('receipt-content-pricing-right');
+    const priceList = document.createElement('ul');
+    priceList.classList.add('receipt-list-pricing');
+    const priceElement = document.createElement('li');
+    priceElement.textContent = `€ ${itemPrice.toFixed(2)}`; // Prijs toevoegen
+    priceList.appendChild(priceElement);
+    itemPriceDiv.appendChild(priceList);
+
+    // Voeg naam en prijs toe aan de nieuwe sectie
+    newSection.appendChild(itemNameDiv);
+    newSection.appendChild(itemPriceDiv);
+
+    // Voeg de nieuwe sectie toe boven de "Totaal" sectie
+    const totalSection = document.querySelector('.receipt-item');
+    receiptContainer.insertBefore(newSection, totalSection);
+
+    // Werk het totaalbedrag bij
+    updateTotal(itemPrice);
+}
+
+function updateTotal(newItemPrice) {
+    // Zoek het totaalbedrag-element
+    const totalElement = document.querySelector('.receipt-total-section h4');
+    let currentTotal = parseFloat(totalElement.textContent.replace('€', '').trim());
+
+    // Voeg de nieuwe prijs toe aan het totaalbedrag
+    currentTotal += newItemPrice;
+    totalElement.textContent = `€ ${currentTotal.toFixed(2)}`;
+}
+
+

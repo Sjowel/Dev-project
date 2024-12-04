@@ -37,7 +37,9 @@
                     <div class="nav-button-section">
                         <div class="nav-translate-button-section">
 
-                            <button class="nav-translate-button"></button>
+                            <a href="calc">
+                                <button class="nav-translate-button"></button>
+                              </a>
 
                         </div>
                         <div class="nav-font-size-section">
@@ -128,19 +130,7 @@
             <div class="Btop-bar">
                 <h1>Basisverzekering</h1>
             </div>
-            <script>
-                const cart = []
-                let totalPrice = 0
 
-                function addToCart(){
-                    const item = {
-                        name: event.target.closest('').querySelector('').textContent,
-                        price: event.target.closest('').querySelector('').textContent
-
-                    };
-                }
-
-            </script>
 
             <div class="Bcontainer">
                 <h2>Welke basisverzekering wil je?</h2>
@@ -156,7 +146,7 @@
                             <div class="Bchoice-top">
 
                                 <div class="Bchoice-top-left">
-                                    <h3>Gewoon ZEKUR Zorg Plus</h3>
+                                    <h3>Gewoon ZEKUR Zorg</h3>
                                     <p>Combinatie Zorgverzekering</p>
                                 </div>
                                 <div class="Bchoice-top-right">
@@ -183,10 +173,8 @@
                         </div>
                         <div class="choice-buttons">
                             <button class="Binfo-button2">Meer informatie</button>
-                            <button class="Bchoose-button2">Kiezen</button>
-
+                            <button onclick="addToCart('Gewoon ZEKUR Zorg', 157.70)" class="Bchoose-button2">Kiezen</button>
                         </div>
-
                     </div>
 
                     <div class="Bchoice">
@@ -224,8 +212,7 @@
                         </div>
                         <div class="choice-buttons">
                             <button class="Binfo-button2">Meer informatie</button>
-                            <button class="Bchoose-button2">Kiezen</button>
-
+                            <button onclick="addToCart('Gewoon ZEKUR Zorg plus', 173.20)" class="Bchoose-button2">Kiezen</button>
                         </div>
 
                     </div>
@@ -528,8 +515,8 @@
 
                         <div class="receipt-content-ul-section-left">
                             <ul class="receipt-list">
-                                <li>Gewoon ZEKUR Zorg Basis</li>
-                                <li>Korting bij eigen risico van € 485,-</li>
+                                <li class="receipt-item">Gewoon ZEKUR Zorg Basis</li>
+                                <li class="receipt-item">Korting bij eigen risico van € 485,-</li>
                             </ul>
                         </div>
                         <div class="receipt-content-pricing-right">
