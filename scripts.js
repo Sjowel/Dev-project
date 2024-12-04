@@ -118,3 +118,64 @@ incrementButton.addEventListener('click', () => {
     }
 });
 
+document.querySelectorAll('.Bchoose-button2').forEach(button => {
+    button.addEventListener('click', function() {
+        // Remove the clicked class from all Bchoice elements
+        document.querySelectorAll('.Bchoice').forEach(choice => {
+            choice.classList.remove('Bchoice-clicked');
+        });
+        // Add the clicked class to the parent Bchoice element
+        this.closest('.Bchoice').classList.add('Bchoice-clicked');
+        
+        // Remove the clicked class from all buttons
+        document.querySelectorAll('.Bchoose-button2').forEach(btn => {
+            btn.classList.remove('Bchoose-button2-clicked');
+            btn.textContent = 'Kiezen'; // Reset text to 'Kiezen'
+        });
+        // Add the clicked class to the clicked button
+        this.classList.add('Bchoose-button2-clicked');
+        this.textContent = 'Gekozen'; // Change text to 'Gekozen'
+    });
+});
+
+
+document.querySelectorAll('.Echoosebutton').forEach(button => {
+    button.addEventListener('click', function() {
+        // Remove the clicked class from all Eoption elements
+        document.querySelectorAll('.Eoption').forEach(container => {
+            container.classList.remove('Eoption-clicked');
+        });
+        // Add the clicked class to the parent Eoption element
+        this.closest('.Eoption').classList.add('Eoption-clicked');
+        
+        // Remove the clicked class from all buttons and reset text
+        document.querySelectorAll('.Echoosebutton').forEach(btn => {
+            btn.classList.remove('Echoosebutton-clicked');
+            btn.textContent = 'Kiezen'; // Reset text to 'Kiezen'
+        });
+        // Change text of the clicked button to 'Gekozen' and add clicked class
+        this.textContent = 'Gekozen';
+        this.classList.add('Echoosebutton-clicked');
+    });
+});
+
+
+document.querySelectorAll('.Bchoose-button2').forEach(button => {
+    button.addEventListener('click', function() {
+        // Remove the clicked class from all Eoption elements
+        document.querySelectorAll('.Bchoice-Extra-ZEKUR').forEach(container => {
+            container.classList.remove('Bchoice-Extra-ZEKUR-clicked');
+        });
+        // Add the clicked class to the parent Bchoice-Extra-ZEKUR element
+        this.closest('.Bchoice-Extra-ZEKUR').classList.add('Bchoice-Extra-ZEKUR-clicked');
+        
+        // Remove the clicked class from all buttons and reset text
+        document.querySelectorAll('.Bchoose-button2').forEach(btn => {
+            btn.classList.remove('Bchoose-button2-clicked');
+            btn.textContent = 'Kiezen'; // Reset text to 'Kiezen'
+        });
+        // Change text of the clicked button to 'Gekozen' and add clicked class
+        this.textContent = 'Gekozen';
+        this.classList.add('Bchoose-button2-clicked');
+    });
+});

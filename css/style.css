@@ -516,24 +516,47 @@ nav.scrolled {
 .Ochoice {
     background-color: #fff;
     padding: 2% 2% 2% 2%;
-    border: 2px solid #D9D9D9;
+    border: 2px solid #143039;
     border-radius: 18px;
     width: 100%;
     text-align: left;
     display: flex !important;
     justify-content: space-between !important;
     flex-direction: column;
+}
 
+.Bchoice-clicked{
+    background-color: #F6FEE3;
+}
 
+.Bchoose-button2-clicked{
+    color: #E9FDB8 !important;
+    background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2221%22%20height%3D%2216%22%20viewBox%3D%220%200%2021%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M2%207.26087L7.82857%2013L19%202%22%20stroke%3D%22%23E9FDB8%22%20stroke-width%3D%223%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+}
+
+.Eoption-clicked {
+    background-color: #F6FEE3 !important;
 
 }
 
+.Bchoice-Extra-ZEKUR-clicked {
+    background-color: #F6FEE3 !important;  
+}
 
 .Bchoice-container-Extra-ZEKUR {
     display: flex;
     gap: 3%;
     margin-top: 30px;
     width: 100%;
+}
+
+.Echoosebutton-clicked{
+    color: #E9FDB8 !important;
+    background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2221%22%20height%3D%2216%22%20viewBox%3D%220%200%2021%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M2%207.26087L7.82857%2013L19%202%22%20stroke%3D%22%23E9FDB8%22%20stroke-width%3D%223%22%2F%3E%3C%2Fsvg%3E') !important;
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
 }
 
 .Bchoice-Extra-ZEKUR {
