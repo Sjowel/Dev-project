@@ -179,3 +179,31 @@ document.querySelectorAll('.Bchoose-button2').forEach(button => {
         this.classList.add('Bchoose-button2-clicked');
     });
 });
+
+document.querySelectorAll('.Bchoose-button2').forEach(button => {
+    button.addEventListener('click', function() {
+        // Add the clicked class to the parent Bchoice-Extra-ZEKUR element
+        this.closest('.Bchoice-Extra-ZEKUR').classList.add('Bchoice-Extra-ZEKUR-clicked');
+        
+        // Change text of the clicked button to 'Gekozen' and add clicked class
+        this.textContent = 'Gekozen';
+        this.classList.add('Bchoose-button2-clicked');
+    });
+});
+
+document.querySelectorAll('.Bchoose-button3').forEach(button => {
+    button.addEventListener('click', function() {
+        const parent = this.closest('.Bchoice-Ongevallen');
+        if (this.classList.contains('Bchoose-button3-clicked')) {
+            // Remove the clicked class from the parent element and reset text
+            parent.classList.remove('Bchoice-Ongevallen-clicked');
+            this.classList.remove('Bchoose-button3-clicked');
+            this.textContent = 'Kiezen';
+        } else {
+            // Add the clicked class to the parent element and change text
+            parent.classList.add('Bchoice-Ongevallen-clicked');
+            this.classList.add('Bchoose-button3-clicked');
+            this.textContent = 'Gekozen';
+        }
+    });
+});
