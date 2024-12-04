@@ -1419,13 +1419,13 @@ input[type="radio"] {
 
 .zigzag {
     background: linear-gradient(45deg, transparent 41px, #FFF 0), linear-gradient(-45deg, transparent 42px, #FFF 0);
-    background-size: 51px;
+    background-size: 55px;
     background-repeat: repeat;
     content: "";
     display: block;
     height: 42px;
     bottom: 0;
-    background-position: 75px 0px;
+    background-position: 133px 0px;
     left: 0;
     width: 100%;
 }
