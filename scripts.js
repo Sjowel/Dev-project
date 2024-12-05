@@ -95,118 +95,118 @@ toggleChildSelect();
 // + of - kind
 
 // Selecteer de elementen
-const decrementButton = document.getElementById('decrementButton');
-const incrementButton = document.getElementById('incrementButton');
-const counterDisplay = document.getElementById('counter');
+// const decrementButton = document.getElementById('decrementButton');
+// const incrementButton = document.getElementById('incrementButton');
+// const counterDisplay = document.getElementById('counter');
 
-// Stel een startwaarde in
-let counterValue = 1;
+// // Stel een startwaarde in
+// let counterValue = 1;
 
-// Voeg functionaliteit toe aan de '-' knop
-decrementButton.addEventListener('click', () => {
-    if (counterValue > 0) { // Controleer of de waarde niet onder 0 komt
-        counterValue--;
-        counterDisplay.textContent = counterValue; // Werk de weergave bij
-    }
-});
+// // Voeg functionaliteit toe aan de '-' knop
+// decrementButton.addEventListener('click', () => {
+//     if (counterValue > 0) { // Controleer of de waarde niet onder 0 komt
+//         counterValue--;
+//         counterDisplay.textContent = counterValue; // Werk de weergave bij
+//     }
+// });
 
-// Voeg functionaliteit toe aan de '+' knop
-incrementButton.addEventListener('click', () => {
-    if (counterValue < 5){
-    counterValue++;
-    counterDisplay.textContent = counterValue; // Werk de weergave bij
-    }
-});
+// // Voeg functionaliteit toe aan de '+' knop
+// incrementButton.addEventListener('click', () => {
+//     if (counterValue < 5){
+//     counterValue++;
+//     counterDisplay.textContent = counterValue; // Werk de weergave bij
+//     }
+// });
 
-document.querySelectorAll('.Bchoose-button2').forEach(button => {
-    button.addEventListener('click', function() {
-        // Remove the clicked class from all Bchoice elements
-        document.querySelectorAll('.Bchoice').forEach(choice => {
-            choice.classList.remove('Bchoice-clicked');
-        });
-        // Add the clicked class to the parent Bchoice element
-        this.closest('.Bchoice').classList.add('Bchoice-clicked');
+// document.querySelectorAll('.Bchoose-button2').forEach(button => {
+//     button.addEventListener('click', function() {
+//         // Remove the clicked class from all Bchoice elements
+//         document.querySelectorAll('.Bchoice').forEach(choice => {
+//             choice.classList.remove('Bchoice-clicked');
+//         });
+//         // Add the clicked class to the parent Bchoice element
+//         this.closest('.Bchoice').classList.add('Bchoice-clicked');
         
-        // Remove the clicked class from all buttons
-        document.querySelectorAll('.Bchoose-button2').forEach(btn => {
-            btn.classList.remove('Bchoose-button2-clicked');
-            btn.textContent = 'Kiezen'; // Reset text to 'Kiezen'
-        });
-        // Add the clicked class to the clicked button
-        this.classList.add('Bchoose-button2-clicked');
-        this.textContent = 'Gekozen'; // Change text to 'Gekozen'
-    });
-});
+//         // Remove the clicked class from all buttons
+//         document.querySelectorAll('.Bchoose-button2').forEach(btn => {
+//             btn.classList.remove('Bchoose-button2-clicked');
+//             btn.textContent = 'Kiezen'; // Reset text to 'Kiezen'
+//         });
+//         // Add the clicked class to the clicked button
+//         this.classList.add('Bchoose-button2-clicked');
+//         this.textContent = 'Gekozen'; // Change text to 'Gekozen'
+//     });
+// });
 
 
-document.querySelectorAll('.Echoosebutton').forEach(button => {
-    button.addEventListener('click', function() {
-        // Remove the clicked class from all Eoption elements
-        document.querySelectorAll('.Eoption').forEach(container => {
-            container.classList.remove('Eoption-clicked');
-        });
-        // Add the clicked class to the parent Eoption element
-        this.closest('.Eoption').classList.add('Eoption-clicked');
+// document.querySelectorAll('.Echoosebutton').forEach(button => {
+//     button.addEventListener('click', function() {
+//         // Remove the clicked class from all Eoption elements
+//         document.querySelectorAll('.Eoption').forEach(container => {
+//             container.classList.remove('Eoption-clicked');
+//         });
+//         // Add the clicked class to the parent Eoption element
+//         this.closest('.Eoption').classList.add('Eoption-clicked');
         
-        // Remove the clicked class from all buttons and reset text
-        document.querySelectorAll('.Echoosebutton').forEach(btn => {
-            btn.classList.remove('Echoosebutton-clicked');
-            btn.textContent = 'Kiezen'; // Reset text to 'Kiezen'
-        });
-        // Change text of the clicked button to 'Gekozen' and add clicked class
-        this.textContent = 'Gekozen';
-        this.classList.add('Echoosebutton-clicked');
-    });
-});
+//         // Remove the clicked class from all buttons and reset text
+//         document.querySelectorAll('.Echoosebutton').forEach(btn => {
+//             btn.classList.remove('Echoosebutton-clicked');
+//             btn.textContent = 'Kiezen'; // Reset text to 'Kiezen'
+//         });
+//         // Change text of the clicked button to 'Gekozen' and add clicked class
+//         this.textContent = 'Gekozen';
+//         this.classList.add('Echoosebutton-clicked');
+//     });
+// });
 
 
-document.querySelectorAll('.Bchoose-button2').forEach(button => {
-    button.addEventListener('click', function() {
-        // Remove the clicked class from all Eoption elements
-        document.querySelectorAll('.Bchoice-Extra-ZEKUR').forEach(container => {
-            container.classList.remove('Bchoice-Extra-ZEKUR-clicked');
-        });
-        // Add the clicked class to the parent Bchoice-Extra-ZEKUR element
-        this.closest('.Bchoice-Extra-ZEKUR').classList.add('Bchoice-Extra-ZEKUR-clicked');
+// document.querySelectorAll('.Bchoose-button2').forEach(button => {
+//     button.addEventListener('click', function() {
+//         // Remove the clicked class from all Eoption elements
+//         document.querySelectorAll('.Bchoice-Extra-ZEKUR').forEach(container => {
+//             container.classList.remove('Bchoice-Extra-ZEKUR-clicked');
+//         });
+//         // Add the clicked class to the parent Bchoice-Extra-ZEKUR element
+//         this.closest('.Bchoice-Extra-ZEKUR').classList.add('Bchoice-Extra-ZEKUR-clicked');
         
-        // Remove the clicked class from all buttons and reset text
-        document.querySelectorAll('.Bchoose-button2').forEach(btn => {
-            btn.classList.remove('Bchoose-button2-clicked');
-            btn.textContent = 'Kiezen'; // Reset text to 'Kiezen'
-        });
-        // Change text of the clicked button to 'Gekozen' and add clicked class
-        this.textContent = 'Gekozen';
-        this.classList.add('Bchoose-button2-clicked');
-    });
-});
+//         // Remove the clicked class from all buttons and reset text
+//         document.querySelectorAll('.Bchoose-button2').forEach(btn => {
+//             btn.classList.remove('Bchoose-button2-clicked');
+//             btn.textContent = 'Kiezen'; // Reset text to 'Kiezen'
+//         });
+//         // Change text of the clicked button to 'Gekozen' and add clicked class
+//         this.textContent = 'Gekozen';
+//         this.classList.add('Bchoose-button2-clicked');
+//     });
+// });
 
-document.querySelectorAll('.Bchoose-button2').forEach(button => {
-    button.addEventListener('click', function() {
-        // Add the clicked class to the parent Bchoice-Extra-ZEKUR element
-        this.closest('.Bchoice-Extra-ZEKUR').classList.add('Bchoice-Extra-ZEKUR-clicked');
+// document.querySelectorAll('.Bchoose-button2').forEach(button => {
+//     button.addEventListener('click', function() {
+//         // Add the clicked class to the parent Bchoice-Extra-ZEKUR element
+//         this.closest('.Bchoice-Extra-ZEKUR').classList.add('Bchoice-Extra-ZEKUR-clicked');
         
-        // Change text of the clicked button to 'Gekozen' and add clicked class
-        this.textContent = 'Gekozen';
-        this.classList.add('Bchoose-button2-clicked');
-    });
-});
+//         // Change text of the clicked button to 'Gekozen' and add clicked class
+//         this.textContent = 'Gekozen';
+//         this.classList.add('Bchoose-button2-clicked');
+//     });
+// });
 
-document.querySelectorAll('.Bchoose-button3').forEach(button => {
-    button.addEventListener('click', function() {
-        const parent = this.closest('.Bchoice-Ongevallen');
-        if (this.classList.contains('Bchoose-button3-clicked')) {
-            // Remove the clicked class from the parent element and reset text
-            parent.classList.remove('Bchoice-Ongevallen-clicked');
-            this.classList.remove('Bchoose-button3-clicked');
-            this.textContent = 'Kiezen';
-        } else {
-            // Add the clicked class to the parent element and change text
-            parent.classList.add('Bchoice-Ongevallen-clicked');
-            this.classList.add('Bchoose-button3-clicked');
-            this.textContent = 'Gekozen';
-        }
-    });
-});
+// document.querySelectorAll('.Bchoose-button3').forEach(button => {
+//     button.addEventListener('click', function() {
+//         const parent = this.closest('.Bchoice-Ongevallen');
+//         if (this.classList.contains('Bchoose-button3-clicked')) {
+//             // Remove the clicked class from the parent element and reset text
+//             parent.classList.remove('Bchoice-Ongevallen-clicked');
+//             this.classList.remove('Bchoose-button3-clicked');
+//             this.textContent = 'Kiezen';
+//         } else {
+//             // Add the clicked class to the parent element and change text
+//             parent.classList.add('Bchoice-Ongevallen-clicked');
+//             this.classList.add('Bchoose-button3-clicked');
+//             this.textContent = 'Gekozen';
+//         }
+//     });
+// });
 
 
 // receipt
@@ -253,55 +253,7 @@ document.querySelectorAll('.Bchoose-button3').forEach(button => {
 //     document.getElementById("toto").innerHTML = totalPrice.toFixed(2);
 // }
 
-function addToCart(itemName, itemPrice) {
-    // Zoek de bon-sectie waar het nieuwe item moet worden toegevoegd.
-    const receiptContainer = document.querySelector('.receipt-container .receipt');
 
-    // Maak een nieuwe sectie voor het toegevoegde item.
-    const newSection = document.createElement('div');
-    newSection.classList.add('receipt-content');
-
-    // Linkerzijde: itemnaam
-    const itemNameDiv = document.createElement('div');
-    itemNameDiv.classList.add('receipt-content-ul-section-left');
-    const itemList = document.createElement('ul');
-    itemList.classList.add('receipt-list');
-    const itemElement = document.createElement('li');
-    itemElement.classList.add('receipt-item');
-    itemElement.textContent = itemName; // Itemnaam toevoegen
-    itemList.appendChild(itemElement);
-    itemNameDiv.appendChild(itemList);
-
-    // Rechterzijde: prijs
-    const itemPriceDiv = document.createElement('div');
-    itemPriceDiv.classList.add('receipt-content-pricing-right');
-    const priceList = document.createElement('ul');
-    priceList.classList.add('receipt-list-pricing');
-    const priceElement = document.createElement('li');
-    priceElement.textContent = `€ ${itemPrice.toFixed(2)}`; // Prijs toevoegen
-    priceList.appendChild(priceElement);
-    itemPriceDiv.appendChild(priceList);
-
-    // Voeg naam en prijs toe aan de nieuwe sectie
-    newSection.appendChild(itemNameDiv);
-    newSection.appendChild(itemPriceDiv);
-
-    // Voeg de nieuwe sectie toe boven de "Totaal" sectie
-    const totalSection = document.querySelector('.receipt-item');
-    receiptContainer.insertBefore(newSection, totalSection);
-
-    // Werk het totaalbedrag bij
-    updateTotal(itemPrice);
-}
-
-function updateTotal(newItemPrice) {
-    // Zoek het totaalbedrag-element
-    const totalElement = document.querySelector('.receipt-total-section h4');
-    let currentTotal = parseFloat(totalElement.textContent.replace('€', '').trim());
-
-    // Voeg de nieuwe prijs toe aan het totaalbedrag
-    currentTotal += newItemPrice;
-    totalElement.textContent = `€ ${currentTotal.toFixed(2)}`;
-}
+// begin bonnetje code
 
 

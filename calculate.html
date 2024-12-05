@@ -39,7 +39,7 @@
 
                             <a href="calc">
                                 <button class="nav-translate-button"></button>
-                              </a>
+                            </a>
 
                         </div>
                         <div class="nav-font-size-section">
@@ -173,7 +173,7 @@
                         </div>
                         <div class="choice-buttons">
                             <button class="Binfo-button2">Meer informatie</button>
-                            <button onclick="addToCart('Gewoon ZEKUR Zorg', 157.70)" class="Bchoose-button2">Kiezen</button>
+                            <button id="Kiezen-Gewoon-ZEKUR-Zorg" class="Bchoose-button2">Kiezen</button>
                         </div>
                     </div>
 
@@ -187,7 +187,7 @@
                                 </div>
                                 <div class="Bchoice-top-right">
                                     <div class="Bprice">
-                                        <h2>€ 143,30</h2>
+                                        <h2>€ 0,00</h2>
                                         <p>per maand</p>
                                     </div>
                                 </div>
@@ -212,7 +212,7 @@
                         </div>
                         <div class="choice-buttons">
                             <button class="Binfo-button2">Meer informatie</button>
-                            <button onclick="addToCart('Gewoon ZEKUR Zorg plus', 173.20)" class="Bchoose-button2">Kiezen</button>
+                            <button id="Gewoon-ZEKUR-Zorg-Plus" class="Bchoose-button2">Kiezen</button>
                         </div>
 
                     </div>
@@ -322,7 +322,7 @@
 
                     </div>
                     <div class="Achoice-container">
-                        <h3 style="margin-bottom:20px;" >Losse aanvullende verzekering</h3>
+                        <h3 style="margin-bottom:20px;">Losse aanvullende verzekering</h3>
                         <div class="Achoice">
 
                             <div>
@@ -456,20 +456,20 @@
                 <h2>Wil je kinderen meeverzekeren?</h2>
 
                 <div class="optionContainer">
-                    
-                    
+
+
                     <label class="Kchoosebutton">
-                       <input type="radio" name="kind" value="Yes" onclick="toggleChildSelect()"> Ja, kind(eren)
+                        <input type="radio" name="kind" value="Yes" onclick="toggleChildSelect()"> Ja, kind(eren)
                         meeverzekeren
                     </label>
-                
-                    
-                    <label class="Kchoosebutton" >
+
+
+                    <label class="Kchoosebutton">
                         <input type="radio" name="kind" value="No" onclick="toggleChildSelect()"> Nee, geen
                         kind(eren)
                         meeverzekeren
                     </label>
-                    
+
                 </div>
 
                 <div class="Child-Select" id="childSelect" style="display: none;">
@@ -481,7 +481,7 @@
                             <button class="Child-Button" id="incrementButton">+</button>
                         </div>
                     </div>
-                    
+
                     <div class="Child-Select-Disclaimer">
                         <p>Tot 18 jaar zijn kinderen gratis meeverzekerd voor de basisverzekering en hoeven zij geen
                             eigen risico te betalen. Ze krijgen dezelfde basisverzekering en aanvullende verzekeringen
@@ -512,19 +512,98 @@
                     </div>
                     <h5>Basisverzekering</h5>
                     <div class="receipt-content">
+                        <script>
+
+
+
+                            //Gewoon Zekur Zorg
+                            document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg').addEventListener('click', function () {
+                            var nameElement = document.getElementById('Basisverzekering-Name');
+                            var priceElement = document.getElementById('Basisverzekering-Prijs');
+                                
+                            if (nameElement.classList.contains('hidden') && priceElement.classList.contains('hidden')) {
+                            nameElement.classList.remove('hidden');
+                            priceElement.classList.remove('hidden');
+                            } else {
+                                nameElement.classList.add('hidden');
+                            priceElement.classList.add('hidden');
+                            }
+                            });
+
+                            // Gewoon Zorg Plus 
+                            document.getElementById('Gewoon-ZEKUR-Zorg-Plus').addEventListener('click', function () {
+
+                            var plusElement = document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg-Plus-Name');
+                            var plusPriceElement = document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg-Plus-Prijs');
+    
+                            if (plusElement.classList.contains('hidden') && plusPriceElement.classList.contains('hidden')) {
+                            plusElement.classList.remove('hidden');
+                            plusPriceElement.classList.remove('hidden');
+                            } else {
+                                plusElement.classList.add('hidden');
+                                plusPriceElement.classList.add('hidden');
+                            }
+                            }); 
+
+                            
+                            //         //Gewoon Zekur Zorg
+                            //         document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg').addEventListener('click', function () {
+                            // var nameElement = document.getElementById('Basisverzekering-Name');
+                            // var priceElement = document.getElementById('Basisverzekering-Prijs');
+                                
+                            // if (nameElement.classList.contains('hidden') && priceElement.classList.contains('hidden')) {
+                            // nameElement.classList.remove('hidden');
+                            // priceElement.classList.remove('hidden');
+                            // } else {
+                            //     nameElement.classList.add('hidden');
+                            // priceElement.classList.add('hidden');
+                            // }
+                            // });
+
+                            // // Gewoon Zorg Plus 
+                            // document.getElementById('Gewoon-ZEKUR-Zorg-Plus').addEventListener('click', function () {
+
+                            // var plusElement = document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg-Plus-Name');
+                            // var plusPriceElement = document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg-Plus-Prijs');
+    
+                            // if (plusElement.classList.contains('hidden') && plusPriceElement.classList.contains('hidden')) {
+                            // plusElement.classList.remove('hidden');
+                            // plusPriceElement.classList.remove('hidden');
+                            // } else {
+                            //     plusElement.classList.add('hidden');
+                            //     plusPriceElement.classList.add('hidden');
+                            // }
+                            // }); 
+                            
+                            
+                            
+                            
+  
+
+ 
+                           
+
+
+                        </script>
 
                         <div class="receipt-content-ul-section-left">
                             <ul class="receipt-list">
-                                <li class="receipt-item">Gewoon ZEKUR Zorg Basis</li>
-                                <li class="receipt-item">Korting bij eigen risico van € 485,-</li>
+                                <li id="Basisverzekering-Name" class="receipt-item hidden">Gewoon ZEKUR Zorg Basis</li>
+                                <li id="Kiezen-Gewoon-ZEKUR-Zorg-Plus-Name" class="receipt-item hidden">Gewoon ZEKUR
+                                    Zorg Plus</li>
+
                             </ul>
                         </div>
                         <div class="receipt-content-pricing-right">
                             <ul class="receipt-list-pricing">
-                                <li>
-                                    € 147,30
-                                </li>
-                                <li>€ -4,00</li>
+                                <li id="Basisverzekering-Prijs" class="hidden">€ 147,30 </li>
+                                <li id="Kiezen-Gewoon-ZEKUR-Zorg-Plus-Prijs" class="hidden"> € 123,00 </li>
+
+
+
+
+
+                                <li id="Eigen-Risico-Korting" class="hidden">€ -4,00</li>
                             </ul>
                         </div>
                     </div>
@@ -574,7 +653,7 @@
                     <div class="receipt-total-section">
                         <a style="color: #2A2A2A; font-size: 16px; !important">Premie per maand
                         </a>
-                        <h4 style="font-size:25px; font-weight: 600;">€ 183,50
+                        <h4 style="font-size:25px; font-weight: 600;">€ 0,00
 
                         </h4>
                     </div>

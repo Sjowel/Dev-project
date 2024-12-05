@@ -2080,3 +2080,9 @@ input[type="radio"] {
     margin-left: 2px;
     margin-top: 10px;
 }
+
+
+/* bonnetje css */
+.hidden {
+    display: none;
+  }
