@@ -151,7 +151,7 @@
                                 </div>
                                 <div class="Bchoice-top-right">
                                     <div class="Bprice">
-                                        <h2>€ 143,30</h2>
+                                        <h2>€ 147,30</h2>
                                         <p>per maand</p>
                                     </div>
                                 </div>
@@ -173,7 +173,8 @@
                         </div>
                         <div class="choice-buttons">
                             <button class="Binfo-button2">Meer informatie</button>
-                            <button id="Kiezen-Gewoon-ZEKUR-Zorg" class="Bchoose-button2">Kiezen</button>
+                            <button id="Kiezen-Gewoon-ZEKUR-Zorg" class="Bchoose-button2" value="basic"
+                                type="Submit">Kiezen</button>
                         </div>
                     </div>
 
@@ -187,7 +188,7 @@
                                 </div>
                                 <div class="Bchoice-top-right">
                                     <div class="Bprice">
-                                        <h2>€ 0,00</h2>
+                                        <h2>€ 123,00</h2>
                                         <p>per maand</p>
                                     </div>
                                 </div>
@@ -212,7 +213,8 @@
                         </div>
                         <div class="choice-buttons">
                             <button class="Binfo-button2">Meer informatie</button>
-                            <button id="Gewoon-ZEKUR-Zorg-Plus" class="Bchoose-button2">Kiezen</button>
+                            <button id="Gewoon-ZEKUR-Zorg-Plus" class="Bchoose-button2" value="plus"
+                                type="submit">Kiezen</button>
                         </div>
 
                     </div>
@@ -234,7 +236,7 @@
                                 <p>€ 0,- korting per maand</p>
                             </div>
                             <div class="Echoice-Button-section">
-                                <button class="Echoosebutton">Kiezen</button>
+                                <button id="Echoosebutton-385" class="Echoosebutton" type="Submit">Kiezen</button>
                             </div>
                         </div>
 
@@ -248,7 +250,7 @@
                                 <p>€ 4,- korting per maand</p>
                             </div>
                             <div class="Echoice-Button-section">
-                                <button class="Echoosebutton">Kiezen</button>
+                                <button id="Echoosebutton-485" class="Echoosebutton" type="Submit">Kiezen</button>
                             </div>
                         </div>
 
@@ -261,7 +263,7 @@
                                 <p>€ 15,- korting per maand</p>
                             </div>
                             <div class="Echoice-Button-section">
-                                <button class="Echoosebutton">Kiezen</button>
+                                <button id="Echoosebutton-885" class="Echoosebutton" type="Submit">Kiezen</button>
                             </div>
                         </div>
 
@@ -316,7 +318,7 @@
                         </div>
                         <div class="choice-buttons">
                             <button class="Binfo-button2">Meer informatie</button>
-                            <button class="Bchoose-button2">Kiezen</button>
+                            <button id="Bchoose-button2-Extra-ZEKUR" class="Bchoose-button2">Kiezen</button>
 
                         </div>
 
@@ -327,7 +329,7 @@
 
                             <div>
                                 <label>
-                                    <input type="checkbox" class="checkbox-Achoice"> Tand 75% van € 250,-
+                                    <input type="checkbox" id="tand" class="checkbox-Achoice"> Tand 75% van € 250,-
                                 </label>
                             </div>
                             <div class=" Aprice"><span class="Bamount">+ € 15,95</span><br>
@@ -335,14 +337,14 @@
                         </div>
                         <div class="Achoice">
                             <label>
-                                <input type="checkbox" class="checkbox-Achoice">Fysio 9 behandelingen
+                                <input type="checkbox" id="fysio" class="checkbox-Achoice">Fysio 9 behandelingen
                             </label>
                             <div class="Aprice"><span class="Bamount">+ € 15,95</span><br>
                             </div>
                         </div>
                         <div class="Achoice">
                             <label>
-                                <input type="checkbox" class="checkbox">Buitenland en reis
+                                <input type="checkbox" id="reis" class="checkbox">Buitenland en reis
                             </label>
                             <div class="Aprice"><span class="Bamount">+ € 4,50</span><br>
                             </div>
@@ -398,7 +400,7 @@
                         </div>
                         <div class="choice-buttons">
                             <button class="Binfo-button2">Meer informatie</button>
-                            <button class="Bchoose-button3">Kiezen</button>
+                            <button id="Hulp-Na-Ongeval" class="Bchoose-button3">Kiezen</button>
 
                         </div>
 
@@ -441,7 +443,7 @@
                         </div>
                         <div class="choice-buttons">
                             <button class="Binfo-button2">Meer informatie</button>
-                            <button class="Bchoose-button3">Kiezen</button>
+                            <button id="Zorg-Ongevallen" class="Bchoose-button3">Kiezen</button>
 
                         </div>
 
@@ -456,7 +458,6 @@
                 <h2>Wil je kinderen meeverzekeren?</h2>
 
                 <div class="optionContainer">
-
 
                     <label class="Kchoosebutton">
                         <input type="radio" name="kind" value="Yes" onclick="toggleChildSelect()"> Ja, kind(eren)
@@ -516,74 +517,308 @@
 
 
 
-                            //Gewoon Zekur Zorg
+                            // Gewoon Zekur Zorg
                             document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg').addEventListener('click', function () {
-                            var nameElement = document.getElementById('Basisverzekering-Name');
-                            var priceElement = document.getElementById('Basisverzekering-Prijs');
-                                
-                            if (nameElement.classList.contains('hidden') && priceElement.classList.contains('hidden')) {
-                            nameElement.classList.remove('hidden');
-                            priceElement.classList.remove('hidden');
-                            } else {
-                                nameElement.classList.add('hidden');
-                            priceElement.classList.add('hidden');
-                            }
-                            });
+                                var nameElement = document.getElementById('Basisverzekering-Name');
+                                var priceElement = document.getElementById('Basisverzekering-Prijs');
+                                var plusElement = document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg-Plus-Name');
+                                var plusPriceElement = document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg-Plus-Prijs');
 
-                            // Gewoon Zorg Plus 
-                            document.getElementById('Gewoon-ZEKUR-Zorg-Plus').addEventListener('click', function () {
-
-                            var plusElement = document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg-Plus-Name');
-                            var plusPriceElement = document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg-Plus-Prijs');
-    
-                            if (plusElement.classList.contains('hidden') && plusPriceElement.classList.contains('hidden')) {
-                            plusElement.classList.remove('hidden');
-                            plusPriceElement.classList.remove('hidden');
-                            } else {
+                                // Hide the other section
                                 plusElement.classList.add('hidden');
                                 plusPriceElement.classList.add('hidden');
+
+                                if (nameElement.classList.contains('hidden') && priceElement.classList.contains('hidden')) {
+                                    nameElement.classList.remove('hidden');
+                                    priceElement.classList.remove('hidden');
+                                } else {
+                                    nameElement.classList.add('hidden');
+                                    priceElement.classList.add('hidden');
+                                }
+                            });
+
+                            // Gewoon Zorg Plus
+                            document.getElementById('Gewoon-ZEKUR-Zorg-Plus').addEventListener('click', function () {
+                                var plusElement = document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg-Plus-Name');
+                                var plusPriceElement = document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg-Plus-Prijs');
+                                var nameElement = document.getElementById('Basisverzekering-Name');
+                                var priceElement = document.getElementById('Basisverzekering-Prijs');
+
+                                // Hide the other section
+                                nameElement.classList.add('hidden');
+                                priceElement.classList.add('hidden');
+
+                                if (plusElement.classList.contains('hidden') && plusPriceElement.classList.contains('hidden')) {
+                                    plusElement.classList.remove('hidden');
+                                    plusPriceElement.classList.remove('hidden');
+                                } else {
+                                    plusElement.classList.add('hidden');
+                                    plusPriceElement.classList.add('hidden');
+                                }
+                            });
+
+                            // Eigenrisico korting €385
+                            document.getElementById('Echoosebutton-385').addEventListener('click', function () {
+                                var plusElement = document.getElementById('Eigen-Risico-Korting-385-Name');
+                                var plusPriceElement = document.getElementById('Eigen-Risico-Korting-385-Prijs');
+                                var nameElement = document.getElementById('Eigen-Risico-Korting-385-Name');
+                                var priceElement = document.getElementById('Eigen-Risico-Korting-385-Prijs');
+
+                                // Hide the other section
+                                nameElement.classList.add('hidden');
+                                priceElement.classList.add('hidden');
+
+                                if (plusElement.classList.contains('hidden') && plusPriceElement.classList.contains('hidden')) {
+                                    plusElement.classList.remove('hidden');
+                                    plusPriceElement.classList.remove('hidden');
+                                } else {
+                                    plusElement.classList.add('hidden');
+                                    plusPriceElement.classList.add('hidden');
+                                }
+                            });
+
+                            // Eigenrisico korting €485
+                            document.getElementById('Echoosebutton-485').addEventListener('click', function () {
+                                var plusElement = document.getElementById('Eigen-Risico-Korting-485-Name');
+                                var plusPriceElement = document.getElementById('Eigen-Risico-Korting-485-Prijs');
+                                var nameElement = document.getElementById('Eigen-Risico-Korting-485-Name');
+                                var priceElement = document.getElementById('Eigen-Risico-Korting-485-Prijs');
+
+                                // Hide the other section
+                                nameElement.classList.add('hidden');
+                                priceElement.classList.add('hidden');
+
+                                if (plusElement.classList.contains('hidden') && plusPriceElement.classList.contains('hidden')) {
+                                    plusElement.classList.remove('hidden');
+                                    plusPriceElement.classList.remove('hidden');
+                                } else {
+                                    plusElement.classList.add('hidden');
+                                    plusPriceElement.classList.add('hidden');
+                                }
+                            });
+
+                            // Eigenrisico korting €885
+                            document.getElementById('Echoosebutton-885').addEventListener('click', function () {
+                                var plusElement = document.getElementById('Eigen-Risico-Korting-885-Name');
+                                var plusPriceElement = document.getElementById('Eigen-Risico-Korting-885-Prijs');
+                                var nameElement = document.getElementById('Eigen-Risico-Korting-885-Name');
+                                var priceElement = document.getElementById('Eigen-Risico-Korting-885-Prijs');
+
+                                // Hide the other section
+                                nameElement.classList.add('hidden');
+                                priceElement.classList.add('hidden');
+
+                                if (plusElement.classList.contains('hidden') && plusPriceElement.classList.contains('hidden')) {
+                                    plusElement.classList.remove('hidden');
+                                    plusPriceElement.classList.remove('hidden');
+                                } else {
+                                    plusElement.classList.add('hidden');
+                                    plusPriceElement.classList.add('hidden');
+                                }
+                            });
+
+                                //Aanvullende verzekeringen ZEKUR
+                                document.getElementById('Bchoose-button2-Extra-ZEKUR').addEventListener('click', function () {
+                                var plusElement = document.getElementById('Extra-ZEKUR-Name');
+                                var plusPriceElement = document.getElementById('Extra-ZEKUR-Prijs');
+                                var nameElement = document.getElementById('Extra-ZEKUR-Name');
+                                var priceElement = document.getElementById('Extra-ZEKUR-Prijs');
+
+                                // Hide the other section
+                                nameElement.classList.add('hidden');
+                                priceElement.classList.add('hidden');
+
+                                if (plusElement.classList.contains('hidden') && plusPriceElement.classList.contains('hidden')) {
+                                    plusElement.classList.remove('hidden');
+                                    plusPriceElement.classList.remove('hidden');
+                                } else {
+                                    plusElement.classList.add('hidden');
+                                    plusPriceElement.classList.add('hidden');
+                                }
+                            });
+
+                                // Losse tandverzekering
+                                document.getElementById('tand').addEventListener('click', function () {
+                                var plusElement = document.getElementById('Tand-Name');
+                                var plusPriceElement = document.getElementById('Tand-Prijs');
+                                var nameElement = document.getElementById('Tand-Name');
+                                var priceElement = document.getElementById('Tand-Prijs');
+
+                                // Hide the other section
+                                nameElement.classList.add('hidden');
+                                priceElement.classList.add('hidden');
+
+                                if (plusElement.classList.contains('hidden') && plusPriceElement.classList.contains('hidden')) {
+                                    plusElement.classList.remove('hidden');
+                                    plusPriceElement.classList.remove('hidden');
+                                } else {
+                                    plusElement.classList.add('hidden');
+                                    plusPriceElement.classList.add('hidden');
+                                }
+                            });
+
+                                // Losse fysioverzekering
+                                document.getElementById('fysio').addEventListener('click', function () {
+                                var plusElement = document.getElementById('Fysio-Name');
+                                var plusPriceElement = document.getElementById('Fysio-Prijs');
+                                var nameElement = document.getElementById('Fysio-Name');
+                                var priceElement = document.getElementById('Fysio-Prijs');
+
+                                // Hide the other section
+                                nameElement.classList.add('hidden');
+                                priceElement.classList.add('hidden');
+
+                                if (plusElement.classList.contains('hidden') && plusPriceElement.classList.contains('hidden')) {
+                                    plusElement.classList.remove('hidden');
+                                    plusPriceElement.classList.remove('hidden');
+                                } else {
+                                    plusElement.classList.add('hidden');
+                                    plusPriceElement.classList.add('hidden');
+                                }
+                            });
+
+                                // Losse reisverzekering
+                                document.getElementById('reis').addEventListener('click', function () {
+                                var plusElement = document.getElementById('Reis-Name');
+                                var plusPriceElement = document.getElementById('Reis-Prijs');
+                                var nameElement = document.getElementById('Reis-Name');
+                                var priceElement = document.getElementById('Reis-Prijs');
+
+                                // Hide the other section
+                                nameElement.classList.add('hidden');
+                                priceElement.classList.add('hidden');
+
+                                if (plusElement.classList.contains('hidden') && plusPriceElement.classList.contains('hidden')) {
+                                    plusElement.classList.remove('hidden');
+                                    plusPriceElement.classList.remove('hidden');
+                                } else {
+                                    plusElement.classList.add('hidden');
+                                    plusPriceElement.classList.add('hidden');
+                                }
+                            });
+
+
+
+                                //Zorg ongevallen
+                                document.getElementById('Zorg-Ongevallen').addEventListener('click', function () {
+                                var plusElement = document.getElementById('Zorg-Ongevallen-Name');
+                                var plusPriceElement = document.getElementById('Zorg-Ongevallen-Prijs');
+                                var nameElement = document.getElementById('Zorg-Ongevallen-Name');
+                                var priceElement = document.getElementById('Zorg-Ongevallen-Prijs');
+
+                                     // Hide the other section
+                                nameElement.classList.add('hidden');
+                                priceElement.classList.add('hidden');
+
+                                if (plusElement.classList.contains('hidden') && plusPriceElement.classList.contains('hidden')) {
+                                    plusElement.classList.remove('hidden');
+                                    plusPriceElement.classList.remove('hidden');
+                                } else {
+                                    plusElement.classList.add('hidden');
+                                    plusPriceElement.classList.add('hidden');
+                                }
+
+                            });
+
+                                //Hulp na ongevallen
+                                document.getElementById('Hulp-Na-Ongeval').addEventListener('click', function () {
+                                var plusElement = document.getElementById('Hulp-Na-Ongeval-Name');
+                                var plusPriceElement = document.getElementById('Hulp-Na-Ongeval-Prijs');
+                                var nameElement = document.getElementById('Hulp-Na-Ongeval-Name');
+                                var priceElement = document.getElementById('Hulp-Na-Ongeval-Prijs');
+
+                                     // Hide the other section
+                                nameElement.classList.add('hidden');
+                                priceElement.classList.add('hidden');
+
+                                if (plusElement.classList.contains('hidden') && plusPriceElement.classList.contains('hidden')) {
+                                    plusElement.classList.remove('hidden');
+                                    plusPriceElement.classList.remove('hidden');
+                                } else {
+                                    plusElement.classList.add('hidden');
+                                    plusPriceElement.classList.add('hidden');
+                                }
+
+                            });
+
+
+
+                            // TOTAL CALCULATION
+
+                            function calculateTotal() {
+                                let total = 0;
+
+                                // Get all visible price elements
+                                const priceElements = document.querySelectorAll('.receipt-list-pricing li:not(.hidden)');
+
+                                // Sum up the prices
+                                priceElements.forEach(function (element) {
+                                    let priceText = element.textContent.trim().replace('€', '').replace(',', '.');
+                                    let price = parseFloat(priceText);
+                                    if (!isNaN(price)) {
+                                        total += price;
+                                    }
+                                });
+
+                                // Update the total in the h4 element
+                                const totalElement = document.querySelector('.receipt-total-section h4');
+                                totalElement.textContent = '€ ' + total.toFixed(2).replace('.', ',');
                             }
-                            }); 
 
-                            
-                            //         //Gewoon Zekur Zorg
-                            //         document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg').addEventListener('click', function () {
-                            // var nameElement = document.getElementById('Basisverzekering-Name');
-                            // var priceElement = document.getElementById('Basisverzekering-Prijs');
-                                
-                            // if (nameElement.classList.contains('hidden') && priceElement.classList.contains('hidden')) {
-                            // nameElement.classList.remove('hidden');
-                            // priceElement.classList.remove('hidden');
-                            // } else {
-                            //     nameElement.classList.add('hidden');
-                            // priceElement.classList.add('hidden');
-                            // }
-                            // });
+                            // Call the calculateTotal function whenever necessary
+                            document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg').addEventListener('click', function () {
+                                // Your existing code...
+                                calculateTotal();
+                            });
 
-                            // // Gewoon Zorg Plus 
-                            // document.getElementById('Gewoon-ZEKUR-Zorg-Plus').addEventListener('click', function () {
+                            document.getElementById('Gewoon-ZEKUR-Zorg-Plus').addEventListener('click', function () {
+                                // Your existing code...
+                                calculateTotal();
+                            });
 
-                            // var plusElement = document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg-Plus-Name');
-                            // var plusPriceElement = document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg-Plus-Prijs');
-    
-                            // if (plusElement.classList.contains('hidden') && plusPriceElement.classList.contains('hidden')) {
-                            // plusElement.classList.remove('hidden');
-                            // plusPriceElement.classList.remove('hidden');
-                            // } else {
-                            //     plusElement.classList.add('hidden');
-                            //     plusPriceElement.classList.add('hidden');
-                            // }
-                            // }); 
-                            
-                            
-                            
-                            
-  
-
- 
-                           
+                            // Initial calculation
+                            calculateTotal();
 
 
+
+
+                        </script>
+
+                        <script>
+                            function hideAllSections() {
+                                var sections = ['385', '485', '885'];
+                                sections.forEach(function (section) {
+                                    document.getElementById('Eigen-Risico-Korting-' + section + '-Name').classList.add('hidden');
+                                    document.getElementById('Eigen-Risico-Korting-' + section + '-Prijs').classList.add('hidden');
+                                });
+                            }
+
+                            document.getElementById('Echoosebutton-385').addEventListener('click', function () {
+                                hideAllSections();
+                                var plusElement = document.getElementById('Eigen-Risico-Korting-385-Name');
+                                var plusPriceElement = document.getElementById('Eigen-Risico-Korting-385-Prijs');
+
+                                plusElement.classList.remove('hidden');
+                                plusPriceElement.classList.remove('hidden');
+                            });
+
+                            document.getElementById('Echoosebutton-485').addEventListener('click', function () {
+                                hideAllSections();
+                                var plusElement = document.getElementById('Eigen-Risico-Korting-485-Name');
+                                var plusPriceElement = document.getElementById('Eigen-Risico-Korting-485-Prijs');
+
+                                plusElement.classList.remove('hidden');
+                                plusPriceElement.classList.remove('hidden');
+                            });
+
+                            document.getElementById('Echoosebutton-885').addEventListener('click', function () {
+                                hideAllSections();
+                                var plusElement = document.getElementById('Eigen-Risico-Korting-885-Name');
+                                var plusPriceElement = document.getElementById('Eigen-Risico-Korting-885-Prijs');
+
+                                plusElement.classList.remove('hidden');
+                                plusPriceElement.classList.remove('hidden');
+                            });
                         </script>
 
                         <div class="receipt-content-ul-section-left">
@@ -592,18 +827,26 @@
                                 <li id="Kiezen-Gewoon-ZEKUR-Zorg-Plus-Name" class="receipt-item hidden">Gewoon ZEKUR
                                     Zorg Plus</li>
 
+                                <li id="Eigen-Risico-Korting-385-Name" class="receipt-item hidden">€ 385,- Eigen Risico
+                                </li>
+                                <li id="Eigen-Risico-Korting-485-Name" class="receipt-item hidden">€ 485,- Eigen Risico
+                                </li>
+                                <li id="Eigen-Risico-Korting-885-Name" class="receipt-item hidden">€ 885,- Eigen Risico
+                                </li>
+
+
                             </ul>
                         </div>
                         <div class="receipt-content-pricing-right">
                             <ul class="receipt-list-pricing">
                                 <li id="Basisverzekering-Prijs" class="hidden">€ 147,30 </li>
                                 <li id="Kiezen-Gewoon-ZEKUR-Zorg-Plus-Prijs" class="hidden"> € 123,00 </li>
+                                <li id="Eigen-Risico-Korting-385-Prijs" class="hidden">€ -0,00</li>
+                                <li id="Eigen-Risico-Korting-485-Prijs" class="hidden">€ -4,00</li>
+                                <li id="Eigen-Risico-Korting-885-Prijs" class="hidden">€ -15,00</li>
 
 
 
-
-
-                                <li id="Eigen-Risico-Korting" class="hidden">€ -4,00</li>
                             </ul>
                         </div>
                     </div>
@@ -614,16 +857,23 @@
 
                         <div class="receipt-content-ul-section-left">
                             <ul class="receipt-list">
-                                <li>Extra ZEKUR</li>
-                                <li>Hulp na een Ongeval</li>
+                                <li id="Extra-ZEKUR-Name" class="hidden" >Extra ZEKUR</li>
+                                <li id="Tand-Name" class="hidden" >Tand 75% van € 250</li>
+                                <li id="Fysio-Name" class="hidden" >Fysio 9 behandelingen                                </li>
+                                <li id="Reis-Name" class="hidden" >Buitenland en reis</li>
+                                <li id="Hulp-Na-Ongeval-Name" class="hidden" >Buitenland en reis</li>
+                                <li id="Zorg-Ongevallen-Name" class="hidden" >Zorg ongevallen</li>
                             </ul>
                         </div>
                         <div class="receipt-content-pricing-right">
                             <ul class="receipt-list-pricing">
-                                <li>
-                                    € 37,95
-                                </li>
-                                <li>€ 2,25</li>
+                                <li id="Extra-ZEKUR-Prijs" class="hidden">€ 37,95</li>
+                                <li id="Tand-Prijs" class="hidden">€ 15,95</li>
+                                <li id="Fysio-Prijs" class="hidden">€ 15,95</li>
+                                <li id="Reis-Prijs" class="hidden">€ 4,50</li>
+                                <li id="Hulp-Na-Ongeval-Prijs" class="hidden">€ 2,25</li>
+                                <li id="Zorg-Ongevallen-Prijs" class="hidden">€ 2,50</li>
+
                             </ul>
                         </div>
                     </div>

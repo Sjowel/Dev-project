@@ -1,0 +1,39 @@
+// Gewoon Zekur Zorg
+document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg').addEventListener('click', function () {
+    var nameElement = document.getElementById('Basisverzekering-Name');
+    var priceElement = document.getElementById('Basisverzekering-Prijs');
+    var plusElement = document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg-Plus-Name');
+    var plusPriceElement = document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg-Plus-Prijs');
+
+    // Hide the other section
+    plusElement.classList.add('hidden');
+    plusPriceElement.classList.add('hidden');
+
+    if (nameElement.classList.contains('hidden') && priceElement.classList.contains('hidden')) {
+        nameElement.classList.remove('hidden');
+        priceElement.classList.remove('hidden');
+    } else {
+        nameElement.classList.add('hidden');
+        priceElement.classList.add('hidden');
+    }
+});
+
+// Gewoon Zorg Plus
+document.getElementById('Gewoon-ZEKUR-Zorg-Plus').addEventListener('click', function () {
+    var plusElement = document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg-Plus-Name');
+    var plusPriceElement = document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg-Plus-Prijs');
+    var nameElement = document.getElementById('Basisverzekering-Name');
+    var priceElement = document.getElementById('Basisverzekering-Prijs');
+
+    // Hide the other section
+    nameElement.classList.add('hidden');
+    priceElement.classList.add('hidden');
+
+    if (plusElement.classList.contains('hidden') && plusPriceElement.classList.contains('hidden')) {
+        plusElement.classList.remove('hidden');
+        plusPriceElement.classList.remove('hidden');
+    } else {
+        plusElement.classList.add('hidden');
+        plusPriceElement.classList.add('hidden');
+    }
+});
