@@ -2086,3 +2086,10 @@ input[type="radio"] {
 .hidden {
     display: none;
   }
+
+  .receipt-content-pricing-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }

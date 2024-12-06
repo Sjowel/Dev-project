@@ -617,127 +617,83 @@
                                 }
                             });
 
-                                //Aanvullende verzekeringen ZEKUR
-                                document.getElementById('Bchoose-button2-Extra-ZEKUR').addEventListener('click', function () {
+                            //Aanvullende verzekeringen ZEKUR
+                            document.getElementById('Bchoose-button2-Extra-ZEKUR').addEventListener('click', function () {
                                 var plusElement = document.getElementById('Extra-ZEKUR-Name');
                                 var plusPriceElement = document.getElementById('Extra-ZEKUR-Prijs');
-                                var nameElement = document.getElementById('Extra-ZEKUR-Name');
-                                var priceElement = document.getElementById('Extra-ZEKUR-Prijs');
 
-                                // Hide the other section
-                                nameElement.classList.add('hidden');
-                                priceElement.classList.add('hidden');
-
-                                if (plusElement.classList.contains('hidden') && plusPriceElement.classList.contains('hidden')) {
-                                    plusElement.classList.remove('hidden');
-                                    plusPriceElement.classList.remove('hidden');
-                                } else {
-                                    plusElement.classList.add('hidden');
-                                    plusPriceElement.classList.add('hidden');
-                                }
+                                // Toggle the visibility of the elements
+                                plusElement.classList.toggle('hidden');
+                                plusPriceElement.classList.toggle('hidden');
                             });
 
-                                // Losse tandverzekering
-                                document.getElementById('tand').addEventListener('click', function () {
+                            // Losse tandverzekering
+                            document.getElementById('tand').addEventListener('click', function () {
+                                // Hide Extra-ZEKUR elements
+                                document.getElementById('Extra-ZEKUR-Name').classList.add('hidden');
+                                document.getElementById('Extra-ZEKUR-Prijs').classList.add('hidden');
+
                                 var plusElement = document.getElementById('Tand-Name');
                                 var plusPriceElement = document.getElementById('Tand-Prijs');
-                                var nameElement = document.getElementById('Tand-Name');
-                                var priceElement = document.getElementById('Tand-Prijs');
 
-                                // Hide the other section
-                                nameElement.classList.add('hidden');
-                                priceElement.classList.add('hidden');
-
-                                if (plusElement.classList.contains('hidden') && plusPriceElement.classList.contains('hidden')) {
-                                    plusElement.classList.remove('hidden');
-                                    plusPriceElement.classList.remove('hidden');
-                                } else {
-                                    plusElement.classList.add('hidden');
-                                    plusPriceElement.classList.add('hidden');
-                                }
+                                // Toggle the visibility of the elements
+                                plusElement.classList.toggle('hidden');
+                                plusPriceElement.classList.toggle('hidden');
                             });
 
-                                // Losse fysioverzekering
-                                document.getElementById('fysio').addEventListener('click', function () {
+                            // Losse fysioverzekering
+                            document.getElementById('fysio').addEventListener('click', function () {
+                                // Hide Extra-ZEKUR elements
+                                document.getElementById('Extra-ZEKUR-Name').classList.add('hidden');
+                                document.getElementById('Extra-ZEKUR-Prijs').classList.add('hidden');
+
                                 var plusElement = document.getElementById('Fysio-Name');
                                 var plusPriceElement = document.getElementById('Fysio-Prijs');
-                                var nameElement = document.getElementById('Fysio-Name');
-                                var priceElement = document.getElementById('Fysio-Prijs');
 
-                                // Hide the other section
-                                nameElement.classList.add('hidden');
-                                priceElement.classList.add('hidden');
-
-                                if (plusElement.classList.contains('hidden') && plusPriceElement.classList.contains('hidden')) {
-                                    plusElement.classList.remove('hidden');
-                                    plusPriceElement.classList.remove('hidden');
-                                } else {
-                                    plusElement.classList.add('hidden');
-                                    plusPriceElement.classList.add('hidden');
-                                }
+                                // Toggle the visibility of the elements
+                                plusElement.classList.toggle('hidden');
+                                plusPriceElement.classList.toggle('hidden');
                             });
 
-                                // Losse reisverzekering
-                                document.getElementById('reis').addEventListener('click', function () {
+                            // Losse reisverzekering
+                            document.getElementById('reis').addEventListener('click', function () {
+                                // Hide Extra-ZEKUR elements
+                                document.getElementById('Extra-ZEKUR-Name').classList.add('hidden');
+                                document.getElementById('Extra-ZEKUR-Prijs').classList.add('hidden');
+
                                 var plusElement = document.getElementById('Reis-Name');
                                 var plusPriceElement = document.getElementById('Reis-Prijs');
-                                var nameElement = document.getElementById('Reis-Name');
-                                var priceElement = document.getElementById('Reis-Prijs');
 
-                                // Hide the other section
-                                nameElement.classList.add('hidden');
-                                priceElement.classList.add('hidden');
-
-                                if (plusElement.classList.contains('hidden') && plusPriceElement.classList.contains('hidden')) {
-                                    plusElement.classList.remove('hidden');
-                                    plusPriceElement.classList.remove('hidden');
-                                } else {
-                                    plusElement.classList.add('hidden');
-                                    plusPriceElement.classList.add('hidden');
-                                }
+                                // Toggle the visibility of the elements
+                                plusElement.classList.toggle('hidden');
+                                plusPriceElement.classList.toggle('hidden');
                             });
 
 
 
-                                //Zorg ongevallen
-                                document.getElementById('Zorg-Ongevallen').addEventListener('click', function () {
+                            //Zorg ongevallen
+                            document.getElementById('Zorg-Ongevallen').addEventListener('click', function () {
                                 var plusElement = document.getElementById('Zorg-Ongevallen-Name');
                                 var plusPriceElement = document.getElementById('Zorg-Ongevallen-Prijs');
                                 var nameElement = document.getElementById('Zorg-Ongevallen-Name');
                                 var priceElement = document.getElementById('Zorg-Ongevallen-Prijs');
 
-                                     // Hide the other section
-                                nameElement.classList.add('hidden');
-                                priceElement.classList.add('hidden');
-
-                                if (plusElement.classList.contains('hidden') && plusPriceElement.classList.contains('hidden')) {
-                                    plusElement.classList.remove('hidden');
-                                    plusPriceElement.classList.remove('hidden');
-                                } else {
-                                    plusElement.classList.add('hidden');
-                                    plusPriceElement.classList.add('hidden');
-                                }
+                                // Hide the other section
+                                nameElement.classList.toggle('hidden');
+                                priceElement.classList.toggle('hidden');
 
                             });
 
-                                //Hulp na ongevallen
-                                document.getElementById('Hulp-Na-Ongeval').addEventListener('click', function () {
+                            //Hulp na ongevallen
+                            document.getElementById('Hulp-Na-Ongeval').addEventListener('click', function () {
                                 var plusElement = document.getElementById('Hulp-Na-Ongeval-Name');
                                 var plusPriceElement = document.getElementById('Hulp-Na-Ongeval-Prijs');
                                 var nameElement = document.getElementById('Hulp-Na-Ongeval-Name');
                                 var priceElement = document.getElementById('Hulp-Na-Ongeval-Prijs');
 
-                                     // Hide the other section
-                                nameElement.classList.add('hidden');
-                                priceElement.classList.add('hidden');
-
-                                if (plusElement.classList.contains('hidden') && plusPriceElement.classList.contains('hidden')) {
-                                    plusElement.classList.remove('hidden');
-                                    plusPriceElement.classList.remove('hidden');
-                                } else {
-                                    plusElement.classList.add('hidden');
-                                    plusPriceElement.classList.add('hidden');
-                                }
+                                // Hide the other section
+                                nameElement.classList.toggle('hidden');
+                                priceElement.classList.toggle('hidden');
 
                             });
 
@@ -766,7 +722,7 @@
                             }
 
                             // Call the calculateTotal function whenever necessary
-                            document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg').addEventListener('click', function () {
+                            document.getElementById('Kiezen-Gewoon-ZEKUR-Zorg',).addEventListener('click', function () {
                                 // Your existing code...
                                 calculateTotal();
                             });
@@ -775,6 +731,56 @@
                                 // Your existing code...
                                 calculateTotal();
                             });
+
+
+                            document.getElementById('Echoosebutton-385').addEventListener('click', function () {
+                                // Your existing code...
+                                calculateTotal();
+                            });
+
+
+
+                            document.getElementById('Echoosebutton-485').addEventListener('click', function () {
+                                // Your existing code...
+                                calculateTotal();
+                            });
+
+                            document.getElementById('Echoosebutton-885').addEventListener('click', function () {
+                                // Your existing code...
+                                calculateTotal();
+                            });
+
+                            document.getElementById('Bchoose-button2-Extra-ZEKUR').addEventListener('click', function () {
+                                // Your existing code...
+                                calculateTotal();
+                            });
+
+                            document.getElementById('tand').addEventListener('click', function () {
+                                // Your existing code...
+                                calculateTotal();
+                            });
+
+                            document.getElementById('fysio').addEventListener('click', function () {
+                                // Your existing code...
+                                calculateTotal();
+                            });
+
+                            document.getElementById('reis').addEventListener('click', function () {
+                                // Your existing code...
+                                calculateTotal();
+                            });
+
+                            document.getElementById('Zorg-Ongevallen').addEventListener('click', function () {
+                                // Your existing code...
+                                calculateTotal();
+                            });
+
+                            document.getElementById('Hulp-Na-Ongeval').addEventListener('click', function () {
+                                // Your existing code...
+                                calculateTotal();
+                            });
+
+
 
                             // Initial calculation
                             calculateTotal();
@@ -821,6 +827,8 @@
                             });
                         </script>
 
+
+
                         <div class="receipt-content-ul-section-left">
                             <ul class="receipt-list">
                                 <li id="Basisverzekering-Name" class="receipt-item hidden">Gewoon ZEKUR Zorg Basis</li>
@@ -857,12 +865,12 @@
 
                         <div class="receipt-content-ul-section-left">
                             <ul class="receipt-list">
-                                <li id="Extra-ZEKUR-Name" class="hidden" >Extra ZEKUR</li>
-                                <li id="Tand-Name" class="hidden" >Tand 75% van € 250</li>
-                                <li id="Fysio-Name" class="hidden" >Fysio 9 behandelingen                                </li>
-                                <li id="Reis-Name" class="hidden" >Buitenland en reis</li>
-                                <li id="Hulp-Na-Ongeval-Name" class="hidden" >Buitenland en reis</li>
-                                <li id="Zorg-Ongevallen-Name" class="hidden" >Zorg ongevallen</li>
+                                <li id="Extra-ZEKUR-Name" class="hidden">Extra ZEKUR</li>
+                                <li id="Tand-Name" class="hidden">Tand 75% van € 250</li>
+                                <li id="Fysio-Name" class="hidden">Fysio 9 behandelingen </li>
+                                <li id="Reis-Name" class="hidden">Buitenland en reis</li>
+                                <li id="Hulp-Na-Ongeval-Name" class="hidden">Buitenland en reis</li>
+                                <li id="Zorg-Ongevallen-Name" class="hidden">Zorg ongevallen</li>
                             </ul>
                         </div>
                         <div class="receipt-content-pricing-right">
@@ -891,12 +899,12 @@
                             </ul>
                         </div>
                         <div class="receipt-content-pricing-right">
-                            <ul class="receipt-list-pricing">
-                                <li>
+                   
+                                <a>
                                     € 37,95
-                                </li>
-                                <li>€ 2,25</li>
-                            </ul>
+                                </a>
+                                <a>€ 2,25</a>
+
                         </div>
                     </div>
                     <div class="dotted-line"></div>
@@ -908,7 +916,10 @@
                         </h4>
                     </div>
                     <div class="receipt-button-section">
-                        <button class="receipt-button">Ga verder</button>
+                        <a href="personal-info.html">
+                            <button class="receipt-button">Ga verder</button>
+                        </a>
+                        <a\>
                     </div>
 
 
@@ -957,6 +968,18 @@
 
 
 
+    <script>
+        document.querySelector('.receipt-button').addEventListener('click', function () {
+            const receiptItems = document.querySelectorAll('.receipt-list-pricing li');
+            const receiptData = Array.from(receiptItems)
+                .filter(item => !item.classList.contains('hidden'))
+                .map(item => item.textContent.trim());
+            localStorage.setItem('receiptData', JSON.stringify(receiptData));
+        });
+    </script>
+
+    
+    
     <script src="scripts.js"></script>
 
 </body>

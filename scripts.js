@@ -98,28 +98,28 @@ toggleChildSelect();
 // + of - kind
 
 // Selecteer de elementen
-// const decrementButton = document.getElementById('decrementButton');
-// const incrementButton = document.getElementById('incrementButton');
-// const counterDisplay = document.getElementById('counter');
+const decrementButton = document.getElementById('decrementButton');
+const incrementButton = document.getElementById('incrementButton');
+const counterDisplay = document.getElementById('counter');
 
-// // Stel een startwaarde in
-// let counterValue = 1;
+// Stel een startwaarde in
+let counterValue = 1;
 
-// // Voeg functionaliteit toe aan de '-' knop
-// decrementButton.addEventListener('click', () => {
-//     if (counterValue > 0) { // Controleer of de waarde niet onder 0 komt
-//         counterValue--;
-//         counterDisplay.textContent = counterValue; // Werk de weergave bij
-//     }
-// });
+// Voeg functionaliteit toe aan de '-' knop
+decrementButton.addEventListener('click', () => {
+    if (counterValue > 0) { // Controleer of de waarde niet onder 0 komt
+        counterValue--;
+        counterDisplay.textContent = counterValue; // Werk de weergave bij
+    }
+});
 
-// // Voeg functionaliteit toe aan de '+' knop
-// incrementButton.addEventListener('click', () => {
-//     if (counterValue < 5){
-//     counterValue++;
-//     counterDisplay.textContent = counterValue; // Werk de weergave bij
-//     }
-// });
+// Voeg functionaliteit toe aan de '+' knop
+incrementButton.addEventListener('click', () => {
+    if (counterValue < 5){
+    counterValue++;
+    counterDisplay.textContent = counterValue; // Werk de weergave bij
+    }
+});
 
 // document.querySelectorAll('.Bchoose-button2').forEach(button => {
 //     button.addEventListener('click', function() {
