@@ -1,7 +1,10 @@
-ZEKUR REDESIGN
-This project is basic HTML, CSS, and JavaScript website with three pages: Home, Calculate, and Personal Details. The goal of this project was to research the ZEKUR. sign up flow, improve it, design a new UI/UX and then code it.
+ZERKUR.NL REDESIGN
 
-Technologies Used
-HTML5: For page structure and semantic content.
-CSS: For styling and layout.
-JavaScript: For interactive functionality.
+This Zekeru.nl redesign is made by Louis, Angelina and Joelle. The goal of the project was to improve the sign up flow of a leading health insurer in The Netherlands. We did this by researching, improving the website in Figma and then coding it.
+
+Contents:
+
+Overview
+File structure
+Functionalities
+Usage
